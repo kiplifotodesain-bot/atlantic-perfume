@@ -16,16 +16,13 @@
         .garis{border-bottom:1px solid #f8d77c50;margin-bottom:10px}
 
         .nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-        .nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:20px;text-decoration:none;font-size:0.85em;transition:all .25s;border:1px solid #f8d77c;height:42px;line-height:1.2;text-align:center;color:#f8d77c;background:transparent;cursor:pointer}
+        .nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:20px;text-decoration:none;font-size:0.82em;transition:all .25s;border:1px solid #f8d77c;height:42px;line-height:1.2;text-align:center;color:#f8d77c;background:transparent;cursor:pointer}
         .nav a.aktif{background:#f8d77c;color:#0f172a;font-weight:bold}
 
         .page{display:none;padding-bottom:40px}
         #beranda{display:block}
         .isi-beranda{padding:10px 0 20px}
         .judul-halaman{text-align:center;font-size:1.3em;color:#f8d77c;margin:10px 0 15px;padding-bottom:6px;border-bottom:1px solid #f8d77c40}
-        .harga-box{background:#ffffff0a;border-radius:12px;padding:16px;margin-bottom:18px;line-height:1.8;text-align:center}
-        .wa-wrap{text-align:center;margin:18px 0 10px}
-        .wa-btn{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;text-decoration:none;padding:11px 24px;border-radius:50px;font-weight:bold;box-shadow:0 3px 10px #25d36633;font-size:0.98em}
         table{width:100%;border-collapse:collapse;margin-bottom:10px;background:#ffffff08;border-radius:8px;overflow:hidden}
         th{background:#f8d77c20;color:#f8d77c;padding:8px 6px;text-align:left;font-size:0.9em}
         td{padding:7px 6px;border-bottom:1px solid #ffffff0a;font-size:0.92em}
@@ -35,6 +32,9 @@
         .info-box{background:#ffffff0a;border-radius:12px;padding:20px;line-height:2.0}
         .info-box p{margin:8px 0}
         .info-box a{color:#f8d77c;text-decoration:underline}
+        .harga-box{background:#ffffff0a;border-radius:12px;padding:16px;margin-bottom:18px;line-height:1.8;text-align:center}
+        .wa-wrap{text-align:center;margin:18px 0 10px}
+        .wa-btn{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;text-decoration:none;padding:11px 24px;border-radius:50px;font-weight:bold;box-shadow:0 3px 10px #25d36633;font-size:0.98em}
  </style>
 </head>
 <body>
@@ -49,12 +49,12 @@
    <nav class="nav">
     <a onclick="bukaHalaman('beranda');return false;" class="aktif">🏠 Beranda</a>
     <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
+    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Elegan</a>
     <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
     <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
     <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
     <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
+    <a onclick="bukaHalaman('kelompok7');return false;">✨ Terpopuler & Klasik</a>
     <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
    </nav>
   </div>
@@ -71,7 +71,7 @@
   </div>
  </div>
 
-<!-- 🍊 KELOMPOK 1 -->
+<!-- 🍊 KELOMPOK 1 — SITRUS SEGAR -->
  <div id="kelompok1" class="page">
   <div class="kepala">
    <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
@@ -80,12 +80,12 @@
    <nav class="nav">
     <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
     <a onclick="bukaHalaman('kelompok1');return false;" class="aktif">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
+    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Elegan</a>
     <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
     <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
     <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
     <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
+    <a onclick="bukaHalaman('kelompok7');return false;">✨ Terpopuler & Klasik</a>
     <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
    </nav>
   </div>
@@ -93,20 +93,30 @@
   <table>
    <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
    <tr><td>A 0101</td><td>Chanel Allure Homme Sport</td><td>Jeruk segar, kayu ringan, bersih</td></tr>
+   <tr><td>B 0101</td><td>Chanel Allure Homme Sport</td><td>Bergamot, jeruk manis, kayu cendana halus, segar berenergi</td></tr>
    <tr><td>A 0102</td><td>Dior Sauvage</td><td>Jeruk, rempah, lavender, tegas maskulin</td></tr>
+   <tr><td>B 0102</td><td>Dior Sauvage</td><td>Bergamot, lada, lavender, ambroxan, tegas dan tahan lama</td></tr>
    <tr><td>A 0103</td><td>Acqua Di Gio</td><td>Jeruk, air laut, melati, sejuk bersih</td></tr>
+   <tr><td>B 0103</td><td>Acqua Di Gio</td><td>Jeruk nipis, melati laut, mawar putih, kesegaran samudra</td></tr>
    <tr><td>A 0104</td><td>Issey Miyake L'Eau d'Issey</td><td>Teratai, jeruk, air, segar murni</td></tr>
+   <tr><td>B 0104</td><td>Issey Miyake L'Eau d'Issey</td><td>Bunga teratai, jeruk yuzu, air murni, kelembutan alami</td></tr>
    <tr><td>A 0105</td><td>Bvlgari Aqua</td><td>Jeruk, air, alga, segar dingin</td></tr>
+   <tr><td>B 0105</td><td>Bvlgari Aqua</td><td>Jeruk segar, alga laut, kayu samak, kesegaran air pegunungan</td></tr>
    <tr><td>A 0201</td><td>Versace Man Eau Fraîche</td><td>Jeruk nipis, kayu, air, ringan segar</td></tr>
+   <tr><td>B 0201</td><td>Versace Man Eau Fraîche</td><td>Jeruk nipis, lemon, kayu cedar, daun mint, segar elegan</td></tr>
    <tr><td>A 0202</td><td>Davidoff Cool Water</td><td>Air dingin, pinus, lavender, menyegarkan</td></tr>
+   <tr><td>B 0202</td><td>Davidoff Cool Water</td><td>Air laut segar, pinus, lavender, kayu putih, dingin murni</td></tr>
    <tr><td>A 0203</td><td>Hugo Boss Bottled Tonic</td><td>Jeruk, jahe, kayu, segar tegas</td></tr>
+   <tr><td>B 0203</td><td>Hugo Boss Bottled Tonic</td><td>Jeruk segar, jahe hangat, kayu cendana, tegas dan berkarakter</td></tr>
    <tr><td>A 0204</td><td>Calvin Klein CK One</td><td>Jeruk, daun, segar bersih uniseks</td></tr>
+   <tr><td>B 0204</td><td>Calvin Klein CK One</td><td>Jeruk, daun hijau, melati, mawar, bersih segar untuk semua</td></tr>
    <tr><td>A 0205</td><td>Lacoste White L.12.12 Blanc</td><td>Jeruk, daun, segar bersih elegan</td></tr>
+   <tr><td>B 0205</td><td>Lacoste White L.12.12 Blanc</td><td>Jeruk putih, daun segar, kayu putih, elegan dan bersih</td></tr>
   </table>
   <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
  </div>
 
-<!-- 🌸 KELOMPOK 2 -->
+<!-- 🌸 KELOMPOK 2 — BUNGA & WANITA ELEGAN -->
  <div id="kelompok2" class="page">
   <div class="kepala">
    <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
@@ -115,12 +125,12 @@
    <nav class="nav">
     <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
     <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;" class="aktif">🌸 Bunga & Wanita</a>
+    <a onclick="bukaHalaman('kelompok2');return false;" class="aktif">🌸 Bunga & Elegan</a>
     <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
     <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
     <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
     <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
+    <a onclick="bukaHalaman('kelompok7');return false;">✨ Terpopuler & Klasik</a>
     <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
    </nav>
   </div>
@@ -128,20 +138,30 @@
   <table>
    <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
    <tr><td>A 0301</td><td>Chanel Coco Mademoiselle</td><td>Mawar, jeruk, ambar, ikonik mewah</td></tr>
+   <tr><td>B 0301</td><td>Chanel Coco Mademoiselle</td><td>Jeruk segar, mawar Bulgaria, ambar, musk putih, mewah cerah</td></tr>
    <tr><td>A 0302</td><td>Dior J'adore</td><td>Melati, mawar, anggrek, emas mewah</td></tr>
+   <tr><td>B 0302</td><td>Dior J'adore</td><td>Melati grandiflorum, mawar, anggrek emas, lembut berkilau</td></tr>
    <tr><td>A 0303</td><td>YSL Black Opium</td><td>Kopi, vanila, bunga, menggoda</td></tr>
+   <tr><td>B 0303</td><td>YSL Black Opium</td><td>Biji kopi, vanila Madagaskar, melati, mawar, hangat memikat</td></tr>
    <tr><td>A 0304</td><td>Gucci Bloom</td><td>Melati, akar anggrek, bunga putih pekat</td></tr>
+   <tr><td>B 0304</td><td>Gucci Bloom</td><td>Melati, akar anggrek, bunga kenanga, taman bunga putih pekat</td></tr>
    <tr><td>A 0305</td><td>Versace Bright Crystal</td><td>Pivoine, melati, jeruk, cerah lembut</td></tr>
+   <tr><td>B 0305</td><td>Versace Bright Crystal</td><td>Jeruk segar, bunga pivoine, melati, musk, lembut berkilau</td></tr>
    <tr><td>A 0401</td><td>Lancôme La Vie Est Belle</td><td>Bunga, manis, praline, bahagia</td></tr>
+   <tr><td>B 0401</td><td>Lancôme La Vie Est Belle</td><td>Melati, mawar, praline, vanila, gula aren, manis bahagia</td></tr>
    <tr><td>A 0402</td><td>Elie Saab Le Parfum</td><td>Melati, jeruk, madu, lembut mewah</td></tr>
+   <tr><td>B 0402</td><td>Elie Saab Le Parfum</td><td>Jeruk segar, melati, madu murni, kayu cendana, lembut mewah</td></tr>
    <tr><td>A 0403</td><td>Valentino Donna</td><td>Mawar, ambar, kayu, anggun mendalam</td></tr>
+   <tr><td>B 0403</td><td>Valentino Donna</td><td>Mawar merah, ambar, kayu cendana, kemenyan, anggun mendalam</td></tr>
    <tr><td>A 0404</td><td>Dior Hypnotic Poison</td><td>Vanila, almond, melati, memikat</td></tr>
+   <tr><td>B 0404</td><td>Dior Hypnotic Poison</td><td>Vanila kaya, almond manis, melati, akar orris, memikat hangat</td></tr>
    <tr><td>A 0405</td><td>Guerlain Shalimar</td><td>Vanila, jeruk, rempah, legenda abadi</td></tr>
+   <tr><td>B 0405</td><td>Guerlain Shalimar</td><td>Jeruk bergamot, vanila, rempah lembut, ambar, legenda abadi</td></tr>
   </table>
   <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
  </div>
 
-<!-- 🪵 KELOMPOK 3 -->
+<!-- 🪵 KELOMPOK 3 — KAYU & MEWAH -->
  <div id="kelompok3" class="page">
   <div class="kepala">
    <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
@@ -150,12 +170,12 @@
    <nav class="nav">
     <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
     <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
+    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Elegan</a>
     <a onclick="bukaHalaman('kelompok3');return false;" class="aktif">🪵 Kayu & Mewah</a>
     <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
     <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
     <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
+    <a onclick="bukaHalaman('kelompok7');return false;">✨ Terpopuler & Klasik</a>
     <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
    </nav>
   </div>
@@ -163,20 +183,30 @@
   <table>
    <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
    <tr><td>A 0501</td><td>Paco Rabanne 1 Million</td><td>Kayu manis, emas, mewah berkilau</td></tr>
+   <tr><td>B 0501</td><td>Paco Rabanne 1 Million</td><td>Kayu manis, emas, ambar, melati, mewah berkilau maskulin</td></tr>
    <tr><td>A 0502</td><td>Chanel Bleu de Chanel</td><td>Kayu cendana, jeruk, rempah, berkelas</td></tr>
+   <tr><td>B 0502</td><td>Chanel Bleu de Chanel</td><td>Jeruk segar, kayu cendana, rempah lembut, ambar, berkelas abadi</td></tr>
    <tr><td>A 0503</td><td>Tom Ford Oud Wood</td><td>Oud, kayu cendana, kemenyan, mendalam</td></tr>
+   <tr><td>B 0503</td><td>Tom Ford Oud Wood</td><td>Kayu agar, kayu cendana, kemenyan, rempah, hangat mendalam</td></tr>
    <tr><td>A 0504</td><td>Dior Fahrenheit</td><td>Bunga, rempah, kulit, tegas ikonik</td></tr>
+   <tr><td>B 0504</td><td>Dior Fahrenheit</td><td>Bunga violet, rempah, kulit halus, kayu, tegas ikonik</td></tr>
    <tr><td>A 0505</td><td>Hermès Terre d'Hermès</td><td>Jeruk, tanah, kayu, elegan abadi</td></tr>
+   <tr><td>B 0505</td><td>Hermès Terre d'Hermès</td><td>Jeruk, tanah segar, kayu, bejana, elegan abadi maskulin</td></tr>
    <tr><td>A 0601</td><td>Prada Luna Rossa</td><td>Jeruk, lavender, kayu, modern elegan</td></tr>
+   <tr><td>B 0601</td><td>Prada Luna Rossa</td><td>Jeruk segar, lavender, kayu cedar, musk, modern elegan</td></tr>
    <tr><td>A 0602</td><td>YSL Y Eau de Parfum</td><td>Jeruk, apel, kayu, tegas modern</td></tr>
+   <tr><td>B 0602</td><td>YSL Y Eau de Parfum</td><td>Jeruk, apel hijau, melati, kayu, ambar, tegas modern</td></tr>
    <tr><td>A 0603</td><td>Armani Code</td><td>Jeruk, bunga, kayu, malam elegan</td></tr>
+   <tr><td>B 0603</td><td>Armani Code</td><td>Jeruk, melati, bunga jeruk, kayu cendana, malam elegan</td></tr>
    <tr><td>A 0604</td><td>Bvlgari Pour Homme</td><td>Jeruk, teh, kayu, segar tenang</td></tr>
+   <tr><td>B 0604</td><td>Bvlgari Pour Homme</td><td>Jeruk putih, teh hijau, kayu cendana, melati, segar tenang</td></tr>
    <tr><td>A 0605</td><td>Dunhill Desire Red</td><td>Apel, mawar, kayu, hangat memikat</td></tr>
+   <tr><td>B 0605</td><td>Dunhill Desire Red</td><td>Apel merah, mawar, kayu manis, ambar, hangat memikat</td></tr>
   </table>
   <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
  </div>
 
-<!-- 🍫 KELOMPOK 4 -->
+<!-- 🍫 KELOMPOK 4 — MANIS & LEGENDA -->
  <div id="kelompok4" class="page">
   <div class="kepala">
    <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
@@ -185,12 +215,12 @@
    <nav class="nav">
     <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
     <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
+    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Elegan</a>
     <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
     <a onclick="bukaHalaman('kelompok4');return false;" class="aktif">🍫 Manis & Legenda</a>
     <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
     <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
+    <a onclick="bukaHalaman('kelompok7');return false;">✨ Terpopuler & Klasik</a>
     <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
    </nav>
   </div>
@@ -198,20 +228,30 @@
   <table>
    <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
    <tr><td>A 0701</td><td>Thierry Mugler Angel</td><td>Cokelat, karamel, vanila, bintang pertama</td></tr>
+   <tr><td>B 0701</td><td>Thierry Mugler Angel</td><td>Cokelat kaya, karamel, vanila Madagaskar, cendana, manis bintang</td></tr>
    <tr><td>A 0702</td><td>Prada Candy</td><td>Karamel, musk, manis menyenangkan</td></tr>
+   <tr><td>B 0702</td><td>Prada Candy</td><td>Karamel madu, musk putih, vanila, manis ceria menyenangkan</td></tr>
    <tr><td>A 0703</td><td>Viktor&Rolf Flowerbomb</td><td>Bunga, manis, berasap, meledak indah</td></tr>
+   <tr><td>B 0703</td><td>Viktor&Rolf Flowerbomb</td><td>Mawar, melati, anggrek, vanila, manis meledak indah</td></tr>
    <tr><td>A 0704</td><td>Dior Addict</td><td>Vanila, bunga, manis memikat</td></tr>
+   <tr><td>B 0704</td><td>Dior Addict</td><td>Vanila segar, melati, mawar, jeruk, manis memikat mempesona</td></tr>
    <tr><td>A 0705</td><td>Givenchy L'Ange Noir</td><td>Manis pekat, bunga malam, misterius</td></tr>
+   <tr><td>B 0705</td><td>Givenchy L'Ange Noir</td><td>Vanila, melati malam, akar orris, manis pekat misterius</td></tr>
    <tr><td>A 0801</td><td>Lancôme Trésor</td><td>Mawar, manis, buah, abadi berharga</td></tr>
+   <tr><td>B 0801</td><td>Lancôme Trésor</td><td>Mawar murni, persik, melati, vanila, abadi berharga lembut</td></tr>
    <tr><td>A 0802</td><td>Chopard Casmir</td><td>Vanila, susu, manis lembut hangat</td></tr>
+   <tr><td>B 0802</td><td>Chopard Casmir</td><td>Vanila kaya, susu lembut, ambar, kayu, manis hangat mewah</td></tr>
    <tr><td>A 0803</td><td>Escada Margaretha Ley</td><td>Buah, bunga, manis klasik</td></tr>
+   <tr><td>B 0803</td><td>Escada Margaretha Ley</td><td>Buah persik, mawar, melati, kayu, manis klasik elegan</td></tr>
    <tr><td>A 0804</td><td>Burberry Brit</td><td>Almond, mawar, kayu, manis santai</td></tr>
+   <tr><td>B 0804</td><td>Burberry Brit</td><td>Almond panggang, mawar, kayu cendana, vanila, manis santai</td></tr>
    <tr><td>A 0805</td><td>Bottega Veneta</td><td>Bunga, manis lembut, elegan halus</td></tr>
+   <tr><td>B 0805</td><td>Bottega Veneta</td><td>Mawar, melati, ambar, kayu, manis lembut elegan halus</td></tr>
   </table>
   <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
  </div>
 
-<!-- 🌶️ KELOMPOK 5 -->
+<!-- 🌶️ KELOMPOK 5 — REMPAH & KUAT -->
  <div id="kelompok5" class="page">
   <div class="kepala">
    <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
@@ -220,12 +260,12 @@
    <nav class="nav">
     <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
     <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
+    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Elegan</a>
     <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
     <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
     <a onclick="bukaHalaman('kelompok5');return false;" class="aktif">🌶️ Rempah & Kuat</a>
     <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
+    <a onclick="bukaHalaman('kelompok7');return false;">✨ Terpopuler & Klasik</a>
     <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
    </nav>
   </div>
@@ -233,173 +273,11 @@
   <table>
    <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
    <tr><td>A 0901</td><td>Chanel No.5</td><td>Aldehid, mawar, rempah, ikonik dunia</td></tr>
+   <tr><td>B 0901</td><td>Chanel No.5</td><td>Aldehid halus, mawar, melati, rempah lembut, ikonik dunia</td></tr>
    <tr><td>A 0902</td><td>Paco Rabanne XS</td><td>Rempah, buah, bunga, seimbang kuat</td></tr>
+   <tr><td>B 0902</td><td>Paco Rabanne XS</td><td>Rempah hangat, buah segar, mawar, melati, seimbang kuat</td></tr>
    <tr><td>A 0903</td><td>Roberto Cavalli</td><td>Rempah, bunga, eksotis mempesona</td></tr>
+   <tr><td>B 0903</td><td>Roberto Cavalli</td><td>Rempah eksotis, bunga melati, mawar, kayu, mempesona</td></tr>
    <tr><td>A 0904</td><td>Salvatore Ferragamo</td><td>Rempah halus, bunga, Italia elegan</td></tr>
-   <tr><td>A 0905</td><td>Bvlgari Jasmin Noir</td><td>Melati pekat, rempah, mewah gelap</td></tr>
-   <tr><td>A 1001</td><td>Guerlain Samsara</td><td>Sandalwood, melati, rempah, mendalam</td></tr>
-   <tr><td>A 1002</td><td>YSL Opium</td><td>Rempah, bunga, eksotis pekat legendaris</td></tr>
-   <tr><td>A 1003</td><td>Dior Dune</td><td>Rempah, bunga laut, pasir, hangat</td></tr>
-   <tr><td>A 1004</td><td>Kenzo Pour Homme</td><td>Rempah ringan, laut, segar unik</td></tr>
-   <tr><td>A 1005</td><td>Issey Miyake Nuit</td><td>Rempah halus, bunga malam, tenang</td></tr>
-  </table>
-  <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
- </div>
-
-<!-- 🌊 KELOMPOK 6 -->
- <div id="kelompok6" class="page">
-  <div class="kepala">
-   <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
-   <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
-   <div class="garis"></div>
-   <nav class="nav">
-    <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
-    <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
-    <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
-    <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
-    <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
-    <a onclick="bukaHalaman('kelompok6');return false;" class="aktif">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
-    <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
-   </nav>
-  </div>
-  <h2 class="judul-halaman">🌊 KELOMPOK 6 — AIR & SEGAR</h2>
-  <table>
-   <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
-   <tr><td>A 1101</td><td>Davidoff Cool Water Woman</td><td>Air segar, bunga, lembut bersih</td></tr>
-   <tr><td>A 1102</td><td>Giorgio Armani Acqua di Gioia</td><td>Jeruk, daun mint, melati, segar gembira</td></tr>
-   <tr><td>A 1103</td><td>Bulgari Omnia Amethyste</td><td>Bunga, jeruk, segar halus ungu</td></tr>
-   <tr><td>A 1104</td><td>Kenzo Flower</td><td>Bunga mawar, segar, unik ikonik</td></tr>
-   <tr><td>A 1105</td><td>Lacoste Red</td><td>Buah, segar, berenergi dinamis</td></tr>
-   <tr><td>A 1201</td><td>Hugo Boss Woman</td><td>Buah, bunga, segar modern</td></tr>
-   <tr><td>A 1202</td><td>Clinique Happy</td><td>Jeruk, segar cerah, gembira bersih</td></tr>
-   <tr><td>A 1203</td><td>Estée Lauder Pleasures</td><td>Bunga segar, ringan, menyenangkan</td></tr>
-   <tr><td>A 1204</td><td>DKNY Be Delicious</td><td>Apel hijau, segar, manis menyegarkan</td></tr>
-   <tr><td>A 1205</td><td>Gap Dream</td><td>Bunga, segar, bersih sederhana</td></tr>
-  </table>
-  <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
- </div>
-
-<!-- 🧶 KELOMPOK 7 -->
- <div id="kelompok7" class="page">
-  <div class="kepala">
-   <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
-   <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
-   <div class="garis"></div>
-   <nav class="nav">
-    <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
-    <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
-    <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
-    <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
-    <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
-    <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;" class="aktif">🧶 Kulit & Lainnya</a>
-    <a onclick="bukaHalaman('info');return false;">📍 Alamat Toko</a>
-   </nav>
-  </div>
-  <h2 class="judul-halaman">🧶 KELOMPOK 7 — KULIT & MEWAH MODERN</h2>
-  <table>
-   <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
-   <tr><td>A 1301</td><td>Tom Ford Tuscan Leather</td><td>Kulit murni, raspberry, mewah mendalam</td></tr>
-   <tr><td>A 1302</td><td>Tom Ford Black Orchid</td><td>Kulit, bunga hitam, rempah, mewah gelap</td></tr>
-   <tr><td>A 1303</td><td>Paco Rabanne 1 Million Privé</td><td>Kulit, kayu manis, resin, mewah pekat</td></tr>
-   <tr><td>A 1304</td><td>Armani Privé</td><td>Kulit, oud, ambar, mewah istana</td></tr>
-   <tr><td>A 1305</td><td>YSL M7</td><td>Kulit, kayu agar, rempah, maskulin mewah</td></tr>
-   <tr><td>A 1401</td><td>Burberry London</td><td>Kulit, tembakau, kayu, kota elegan</td></tr>
-   <tr><td>A 1402</td><td>Carolina Herrera CH</td><td>Kulit, cokelat, rempah, mewah segar</td></tr>
-   <tr><td>A 1403</td><td>Givenchy Pi</td><td>Kulit, vanila, ambar, hangat mendalam</td></tr>
-   <tr><td>A 1404</td><td>Hugo Boss Boss Intense</td><td>Kulit, kayu, ambar, malam mewah</td></tr>
-   <tr><td>A 1405</td><td>Montale Intense Café</td><td>Kulit, kopi, vanila, hangat unik</td></tr>
-  </table>
-
-  <h2 class="judul-halaman" style="margin-top:30px;">✨ TERPOPULER & IKONIK</h2>
-  <table>
-   <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
-   <tr><td>A 1501</td><td>Dior Homme</td><td>Jeruk, bunga, kayu, modern halus</td></tr>
-   <tr><td>A 1502</td><td>Chanel Allure</td><td>Jeruk, mawar, kayu, seimbang sempurna</td></tr>
-   <tr><td>A 1503</td><td>Gucci Guilty</td><td>Jeruk, bunga, kayu, menggoda ikonik</td></tr>
-   <tr><td>A 1504</td><td>Versace Eros</td><td>Apel, kayu, vanila, kuat menggoda</td></tr>
-   <tr><td>A 1505</td><td>Bvlgari Rose Essentielle</td><td>Mawar, jeruk, kayu, mewah lembut</td></tr>
-   <tr><td>A 1601</td><td>Hermès Un Jardin Sur Le Nil</td><td>Jeruk, mangga, daun, segar eksotis</td></tr>
-   <tr><td>A 1602</td><td>Chanel Chance</td><td>Jeruk, bunga, segar cerah beruntung</td></tr>
-   <tr><td>A 1603</td><td>Dior Miss Dior</td><td>Mawar, jeruk, bunga, anggun abadi</td></tr>
-   <tr><td>A 1604</td><td>Lanvin Éclat d'Arpège</td><td>Melati, mawar, segar halus elegan</td></tr>
-   <tr><td>A 1605</td><td>Nina Ricci L'Air du Temps</td><td>Melati, mawar, cengkeh, burung merpati</td></tr>
-  </table>
-
-  <h2 class="judul-halaman" style="margin-top:30px;">🌟 KLASIK ABADI</h2>
-  <table>
-   <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
-   <tr><td>A 1701</td><td>Cacharel Anaïs Anaïs</td><td>Melati, mawar, segar lembut klasik</td></tr>
-   <tr><td>A 1702</td><td>YSL Paris</td><td>Bunga, mawar, segar klasik Prancis</td></tr>
-   <tr><td>A 1703</td><td>Guerlain Mitsouko</td><td>Buah persik, kayu, rempah, abadi misteri</td></tr>
-   <tr><td>A 1704</td><td>Rochas Femme</td><td>Buah, bunga, rempah, klasik elegan</td></tr>
-   <tr><td>A 1705</td><td>Fendi Theorema</td><td>Bunga, kayu, ambar, mewah klasik</td></tr>
-   <tr><td>A 1801</td><td>Cartier Must de Cartier</td><td>Jeruk, bunga, kayu, mewah abadi</td></tr>
-   <tr><td>A 1802</td><td>Van Cleef & Arpels First</td><td>Jeruk, bunga, segar elegan permata</td></tr>
-   <tr><td>A 1803</td><td>Balmain Vent Vert</td><td>Jeruk, bunga, segar hijau ikonik</td></tr>
-   <tr><td>A 1804</td><td>Givenchy III</td><td>Jeruk, bunga, kayu, klasik berkelas</td></tr>
-   <tr><td>A 1805</td><td>Lanvin Arpège</td><td>Melati, mawar, rempah, lagu abadi</td></tr>
-  </table>
-  <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
- </div>
-
-<!-- 📍 TOMBOL KESEMBILAN — ALAMAT & JAM BUKA -->
- <div id="info" class="page">
-  <div class="kepala">
-   <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
-   <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
-   <div class="garis"></div>
-   <nav class="nav">
-    <a onclick="bukaHalaman('beranda');return false;">🏠 Beranda</a>
-    <a onclick="bukaHalaman('kelompok1');return false;">🍊 Sitrus Segar</a>
-    <a onclick="bukaHalaman('kelompok2');return false;">🌸 Bunga & Wanita</a>
-    <a onclick="bukaHalaman('kelompok3');return false;">🪵 Kayu & Mewah</a>
-    <a onclick="bukaHalaman('kelompok4');return false;">🍫 Manis & Legenda</a>
-    <a onclick="bukaHalaman('kelompok5');return false;">🌶️ Rempah & Kuat</a>
-    <a onclick="bukaHalaman('kelompok6');return false;">🌊 Air & Segar</a>
-    <a onclick="bukaHalaman('kelompok7');return false;">🧶 Kulit & Lainnya</a>
-    <a onclick="bukaHalaman('info');return false;" class="aktif">📍 Alamat Toko</a>
-   </nav>
-  </div>
-  <h2 class="judul-halaman">📍 ALAMAT & JAM BUKA TOKO</h2>
-  <div class="info-box">
-   <p><strong>🏪 ATLANTIC PARFUME</strong></p>
-   <p><strong>📍 Alamat:</strong> Jalan Batur Sari — Area Kuliner Batur Sari, Denpasar Selatan, Bali</p>
-   <p><strong>🕐 Jam Buka:</strong> Setiap Hari — 09.00 s.d. 21.00 WITA</p>
-   <p><strong>📱 WhatsApp:</strong> <a href="https://wa.me/6289676100177" target="_blank">+62 896-7610-0177</a></p>
-   <p><strong>🗺️ Lihat di Peta:</strong> <a href="https://maps.app.goo.gl/kvJayiASrCyBQCES6?g_st=awb" target="_blank">Klik untuk Buka Google Maps</a></p>
-  </div>
-  <div class="kembali"><a onclick="bukaHalaman('beranda');return false;">← Kembali ke Beranda</a></div>
- </div>
-
-<script>
-// FUNGSI SEDERHANA — PASTI BERJALAN DI SEMUA TEMPAT
-function bukaHalaman(idHalaman) {
- // Sembunyikan SEMUA halaman
- var halaman = document.querySelectorAll('.page');
- for(var i=0; i<halaman.length; i++){
-  halaman[i].style.display = 'none';
- }
- // Tampilkan halaman yang dipilih
- document.getElementById(idHalaman).style.display = 'block';
- // Hapus tanda aktif semua tombol
- var tombol = document.querySelectorAll('.nav a');
- for(var j=0; j<tombol.length; j++){
-  tombol[j].classList.remove('aktif');
- }
- // Tandai tombol yang aktif
- var semuaTombol = document.querySelectorAll('.nav a[onclick*="'+idHalaman+'"]');
- for(var k=0; k<semuaTombol.length; k++){
-  semuaTombol[k].classList.add('aktif');
- }
- // Kembali ke atas halaman
- window.scrollTo(0, 0);
-}
-</script>
-
-</div>
-</body>
-</html>
+   <tr><td>B 0904</td><td>Salvatore Ferragamo</td><td>Rempah halus, mawar, melati, jeruk, Italia elegan mewah</td></tr>
+ 
