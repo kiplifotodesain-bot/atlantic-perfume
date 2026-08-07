@@ -6,19 +6,24 @@
  <title>ATLANTIC PARFUME — Beranda</title>
  <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
-body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff;line-height:1.6;padding:16px}
-.container{max-width:720px;margin:0 auto}
+html,body{height:100%}
+body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
+.container{max-width:720px;margin:0 auto;padding:0 16px}
 .kepala{text-align:center;padding:15px 10px 10px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0f1a2f,#152238ee)}
 .logo h1{font-size:2em;color:#f8d77c;letter-spacing:2px;text-transform:uppercase}
 .tagline{color:#fff;font-size:1em;margin:6px 0 10px}
-.garis{border-bottom:1px solid #f8d77c50;margin-bottom:10px}
-.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin:0}
-.nav a{display:flex;align-items:center;justify-content:center;padding:10px 6px;border-radius:20px;text-decoration:none;font-size:0.85em;transition:all .25s;border:1px solid #f8d77c;color:#f8d77c;background:transparent;text-align:center;height:44px;line-height:1.2}
+.garis{border-bottom:1px solid #f8d77c50;margin-bottom:8px}
+.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:20px;text-decoration:none;font-size:0.88em;transition:all .25s;border:1px solid #f8d77c;height:42px;line-height:1.2;text-align:center;cursor:pointer}
 .nav a.aktif{background:#f8d77c;color:#0f172a;font-weight:bold}
-.nav a:hover{background:#f8d77c;color:#0f172a;font-weight:bold}
-.harga-box{background:#ffffff0a;border-radius:12px;padding:20px;margin:15px 0;text-align:center;line-height:1.8}
-.wa-box{text-align:center;margin:20px 0}
-.wa-btn{display:inline-flex;align-items:center;justify-content:center;background:#25d366;color:#fff;text-decoration:none;padding:12px 28px;border-radius:50px;font-weight:bold;box-shadow:0 3px 10px #25d36633;font-size:1em}
+.nav a:not(.aktif){background:transparent;color:#f8d77c}
+.nav .baris-akhir{grid-column:span 3;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.isi-beranda{padding:10px 0 20px}
+.harga-box{background:#ffffff0a;border-radius:12px;padding:16px;margin-bottom:18px;line-height:1.7;text-align:center}
+.wa-wrap{text-align:center;margin:18px 0 10px}
+.wa-btn{display:inline-flex;align-items:center;gap:8px;background:#25d366;color:#fff;text-decoration:none;padding:11px 24px;border-radius:50px;font-weight:bold;box-shadow:0 3px 10px #25d36633;font-size:0.98em}
+.kembali{margin-top:25px;text-align:center}
+.kembali a{display:inline-block;color:#f8d77c;text-decoration:none;border:1px solid #f8d77c;padding:9px 22px;border-radius:20px;cursor:pointer}
  </style>
 </head>
 <body>
@@ -27,31 +32,32 @@ body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff;line-height:1
   <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
   <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
   <div class="garis"></div>
+  <nav class="nav">
+   <a href="index.html" class="aktif">BERANDA</a>
+   <a href="kelompok1.html">SEGAR</a>
+   <a href="kelompok2.html">BUNGA</a>
+   <a href="kelompok3.html">KAYU</a>
+   <a href="kelompok4.html">MANIS</a>
+   <a href="kelompok5.html">REMPAH</a>
+   <div class="baris-akhir">
+    <a href="kelompok6.html">SEGAR</a>
+    <a href="kelompok7.html">POPULER</a>
+    <a href="info.html">ALAMAT</a>
+   </div>
+  </nav>
+ </div>
 
-  <div class="nav">
-   <a href="index.html" class="aktif">Beranda</a>
-   <a href="kelompok1.html">Sitrus Segar</a>
-   <a href="kelompok2.html">Bunga & Elegan</a>
-   <a href="kelompok3.html">Kayu & Mewah</a>
-   <a href="kelompok4.html">Manis & Legenda</a>
-   <a href="kelompok5.html">Rempah & Kuat</a>
-   <a href="kelompok6.html">Air & Segar</a>
-   <a href="kelompok7.html">Terpopuler & Klasik</a>
-   <a href="info.html">Alamat Toko</a>
+ <div class="isi-beranda">
+  <div class="harga-box">
+   <p><strong>KISARAN HARGA</strong></p>
+   <p>Standar & Ekonomis: <strong>Rp 2.500 – Rp 3.500 / ml</strong></p>
+   <p>Premium: <strong>Rp 4.000 – Rp 7.000 / ml</strong></p>
+   <p style="margin-top:6px;color:#94a3b8;font-size:0.9em;">Diskon khusus untuk pembelian jumlah tertentu</p>
   </div>
- </div>
-
- <div class="harga-box">
-  <p><strong>KISARAN HARGA</strong></p>
-  <p>Standar & Ekonomis: <strong>Rp 2.500 – Rp 3.500 / ml</strong></p>
-  <p>Premium: <strong>Rp 4.000 – Rp 7.000 / ml</strong></p>
-  <p style="margin-top:8px;color:#94a3b8;font-size:0.9em;">Diskon khusus untuk pembelian jumlah tertentu</p>
- </div>
-
- <div class="wa-box">
-  <a href="https://wa.me/6289676100177" target="_blank" class="wa-btn">Hubungi via WhatsApp</a>
+  <div class="wa-wrap">
+   <a href="https://wa.me/6289676100177" target="_blank" class="wa-btn">💬 Hubungi Kami via WhatsApp</a>
+  </div>
  </div>
 </div>
 </body>
 </html>
-
