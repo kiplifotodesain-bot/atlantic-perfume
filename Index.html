@@ -288,4 +288,27 @@
    <tr><td>B 1002</td><td>YSL Opium</td><td>Rempah hangat, melati, mawar, kemenyan, eksotis pekat legendaris</td></tr>
    <tr><td>A 1003</td><td>Dior Dune</td><td>Rempah, bunga laut, pasir, hangat</td></tr>
    <tr><td>B 1003</td><td>Dior Dune</td><td>Rempah lembut, bunga laut, vanila, pasir hangat, sejuk nyaman</td></tr>
-   <tr><td>A 1004</td><td>Kenzo Pour Homm
+   <tr><td>A 1004</td><td>Kenzo Pour Homm  </table>
+  <div class="kembali"><a onclick="bukaHalaman('beranda')">← Kembali ke Beranda</a></div>
+ </div>
+
+<!-- 🌊 KELOMPOK 6 -->
+... (sisa kode kelompok 6, 7, dan halaman info) ...
+
+<!-- ⚙️ FUNGSI JAVASCRIPT — WAJIB ADA! -->
+<script>
+function bukaHalaman(idHalaman) {
+ const semuaHalaman = document.querySelectorAll('.page');
+ semuaHalaman.forEach(halaman => { halaman.style.display = 'none'; });
+ document.getElementById(idHalaman).style.display = 'block';
+ const semuaTombol = document.querySelectorAll('.nav a');
+ semuaTombol.forEach(tombol => { tombol.classList.remove('aktif'); });
+ event.target.classList.add('aktif');
+ window.scrollTo(0, 0);
+}
+</script>
+
+</div>
+</body>
+</html>
+
