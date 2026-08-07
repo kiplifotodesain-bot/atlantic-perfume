@@ -1,232 +1,298 @@
 <!doctype html>
 <html lang="id">
- <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Atlantic Perfume — Temukan Wangi yang Mencerminkan Dirimu</title>
-  <style>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Atlantic Perfume — Temukan Wangi yang Mencerminkan Dirimu</title>
+ <style>
         *{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
-        body{background:linear-gradient(135deg,#0f172a,#1e293b);color:#fff;min-height:100vh}
-        .container{max-width:720px;margin:0 auto;padding:30px 20px}
-        .logo{text-align:center;margin-bottom:40px}
-        .logo h1{font-size:2.2em;color:#f8d77c;margin-bottom:10px;letter-spacing:2px}
-        .garis{width:100px;height:2px;background:#f8d77c;margin:20px auto}
-        .logo p{color:#b0b0b0;font-style:italic;line-height:1.6}
-        .slogan{text-align:center;margin-bottom:40px;line-height:1.8;color:#e0e0e0}
-        .info{background:rgba(255,255,255,.04);padding:20px;border-radius:10px;line-height:1.8;color:#d4d4d4;font-size:.95em;margin-bottom:30px}
-        .info strong{color:#f8d77c}
-        .hubungi{margin-top:25px;padding:15px;background:rgba(248,215,124,.08);border-radius:8px;text-align:center;margin-bottom:40px}
-        .hubungi p{color:#d4d4d4;margin-bottom:8px}
-        .hubungi a{color:#f8d77c;text-decoration:none;font-weight:bold}
-        .nav{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:25px;position:sticky;top:0;background:rgba(15,23,42,.95);padding:10px 0;z-index:100}
-        .nav a{color:#f8d77c;text-decoration:none;padding:6px 12px;border:1px solid #f8d77c;border-radius:50px;font-size:.9em}
-        .nav a:hover{background:#f8d77c;color:#0f172a}
-        h2{color:#f8d77c;padding:15px 0 10px 0;border-bottom:1px solid rgba(255,255,255,.12);margin-top:40px;margin-bottom:20px}
-        .daftar a{display:block;text-decoration:none;color:#f8d77c;border:1px solid #f8d77c;padding:15px 20px;border-radius:10px;margin-bottom:12px;text-align:center;font-size:1.05em}
-        .daftar a:hover{background:#f8d77c;color:#0f172a}
-        .item{background:rgba(255,255,255,.04);padding:12px 14px;border-radius:8px;margin-bottom:8px;border-left:3px solid #f8d77c}
-        .kode{font-weight:bold;color:#f8d77c}
-        .nama{color:#fff;margin:3px 0}
-        .aroma{font-size:.9em;color:#b0b0b0;font-style:italic}
-        .bawah{margin-top:40px;padding-top:20px;border-top:1px solid rgba(255,255,255,.08);text-align:center;margin-bottom:40px}
-        .bawah a{display:inline-block;color:#f8d77c;text-decoration:none;padding:8px 20px;border:1px solid #f8d77c;border-radius:50px;font-weight:bold}
-        .bawah a:hover{background:#f8d77c;color:#0f172a}
-        .halaman{display:none}
-        .halaman:target{display:block}
-        #beranda{display:block}
+        body{background-color:#000;color:#fff;min-height:100vh}
+        .container{max-width:720px;margin:0 auto;padding:25px 20px}
+
+        /* NAVIGASI — SELALU DI ATAS */
+        .nav-top{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:30px;position:sticky;top:0;background:#000;padding:10px 0;z-index:10}
+        .nav-top a{background:rgba(248,215,124,.1);border:1px solid #f8d77c;color:#f8d77c;text-decoration:none;padding:12px 6px;border-radius:8px;text-align:center;font-size:1em;transition:.2s}
+        .nav-top a:hover,.nav-top a:target{background:#f8d77c;color:#000}
+
+        /* BERANDA */
+        .beranda{text-align:center;padding:20px 0}
+        .beranda h1{font-size:2.6em;color:#f8d77c;margin-bottom:5px;letter-spacing:3px}
+        .beranda h2{font-size:2.6em;color:#f8d77c;margin-bottom:20px;letter-spacing:3px}
+        .garis{width:120px;height:2px;background:#f8d77c;margin:0 auto 30px}
+        .slogan{font-size:1.2em;color:#c9b87e;line-height:1.6;margin-bottom:30px;font-style:italic}
+        .kutipan{font-size:1.15em;line-height:1.8;color:#e2d4a0;max-width:600px;margin:0 auto 40px}
+
+        /* INFO HARGA & KONTAK — HANYA DI BERANDA */
+        .info{background:rgba(248,215,124,.08);border:1px solid rgba(248,215,124,.2);border-radius:10px;padding:20px;max-width:520px;margin:0 auto}
+        .info h3{color:#f8d77c;margin-bottom:15px;font-size:1em}
+        .info ul{list-style:none;padding-left:5px}
+        .info li{margin-bottom:10px;line-height:1.6;color:#f0e6c8}
+        .kontak{margin-top:18px;padding-top:15px;border-top:1px dashed rgba(248,215,124,.2);text-align:center}
+        .kontak p{color:#f8d77c;margin-bottom:8px}
+        .kontak a{color:#f8d77c;font-size:1.1em;text-decoration:none;font-weight:bold}
+
+        /* DAFTAR VARIAN */
+        .kelompok{display:none;margin-top:10px}
+        .kelompok:target{display:block}
+        .item{padding:10px 0;border-bottom:1px dashed rgba(248,215,124,.12);font-size:.92em;line-height:1.5;color:#f0e6c8}
+        .kode{color:#f8d77c;font-weight:bold;margin-right:8px}
+
+        /* TOMBOL KEMBALI — ADA DI SETIAP KELOMPOK 1-7 */
+        .btn-home{display:block;width:fit-content;margin:30px auto 20px;padding:10px 25px;background:transparent;border:2px solid #f8d77c;color:#f8d77c;border-radius:8px;text-decoration:none;text-align:center;font-size:1em}
+        .btn-home:hover{background:#f8d77c;color:#000}
+
+        /* SEMBUNYIKAN BERANDA SAAT KELOMPOK DIBUKA */
+        .kelompok:target ~ .beranda{display:none}
  </style>
- </head>
- <body>
-  <div class="container">
-   <div class="nav">
-    <a href="#beranda">🏠 Beranda</a> <a href="#k1">🍋 K1</a> <a href="#k2">🌸 K2</a> <a href="#k3">🌊 K3</a> <a href="#k4">🪵 K4</a> <a href="#k5">🍬 K5</a> <a href="#k6">🌶️ K6</a> <a href="#k7">☁️ K7</a>
-   </div>
-   <div id="beranda" class="halaman">
-    <div class="logo">
-     <h1>ATLANTIC PERFUME</h1>
-     <div class="garis"></div>
-     <p>Temukan wangi yang mencerminkan kepribadianmu</p>
-    </div>
-    <div class="slogan">
-     <p>Hidup adalah keselarasan hati dan jiwa.
-      <br>
-      Seperti aroma yang membalut tubuh, wangi yang tepat selaras dengan kepribadianmu.</p>
-    </div>
-    <div class="info">
-     <p><strong>ℹ️ Informasi Harga:</strong>
-      <br>
-      • Kualitas Standar &amp; Ekonomis: Rp 2.500 – Rp 3.500 per ml
-      <br>
-      • Kualitas Premium: Rp 4.000 – Rp 7.000 per ml
-      <br>
-      • Diskon 5% untuk pesanan 50 ml | Diskon 10% untuk pesanan 100 ml ke atas</p>
-    </div>
-    <div class="hubungi">
-     <p>📞 Untuk pesanan pasti &amp; konsultasi aroma:</p>
-     <a href="https://wa.me/6289676100177" target="_blank">+62 896-7610-0177 (WhatsApp)</a>
-    </div>
-    <h2>📋 Pilih Kelompok Aroma</h2>
-    <div class="daftar">
-     <a href="#k1">🍋 KELOMPOK 1 — Sitrus Segar / Ringan</a> <a href="#k2">🌸 KELOMPOK 2 — Bunga / Floral</a> <a href="#k3">🌊 KELOMPOK 3 — Laut / Air</a> <a href="#k4">🪵 KELOMPOK 4 — Kayu / Amber</a> <a href="#k5">🍬 KELOMPOK 5 — Manis / Gourmand</a> <a href="#k6">🌶️ KELOMPOK 6 — Rempah Pekat</a> <a href="#k7">☁️ KELOMPOK 7 — Bedak / Lembut</a>
-    </div>
-   </div>
-   <div id="k1" class="halaman">
-    <h2>🍋 KELOMPOK 1 — Sitrus Segar / Ringan</h2>
-    <div class="item">
-     <div class="kode">A 0101</div>
-     <div class="nama">Escada Love Cherrie</div>
-     <div class="aroma">jeruk + buah segar, ringan cerah</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0603</div>
-     <div class="nama">Aqua Di Gio</div>
-     <div class="aroma">jeruk + air laut, segar bersih</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0605</div>
-     <div class="nama">VERSACE Eros</div>
-     <div class="aroma">jeruk + apel, segar manis cerah</div>
-    </div>
-    <div class="item">
-     <div class="kode">B 1703</div>
-     <div class="nama">Aqua Kiss</div>
-     <div class="aroma">jeruk nipis + mint + bunga air, sangat segar dan bersih</div>
-    </div>
-    <div class="item">
-     <div class="kode">LV131</div>
-     <div class="nama">1 BILLION</div>
-     <div class="aroma">jeruk segar + rempah ringan, mewah cerah</div>
-    </div>
-    <div class="item">
-     <div class="kode">LV298</div>
-     <div class="nama">1 BILLION INTENSE</div>
-     <div class="aroma">jeruk pekat + rempah hangat, lebih dalam</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
-   </div>
-   <div id="k2" class="halaman">
-    <h2>🌸 KELOMPOK 2 — Bunga / Floral</h2>
-    <div class="item">
-     <div class="kode">A 0202</div>
-     <div class="nama">Gucci Flora</div>
-     <div class="aroma">peony + mawar, bunga mewah dan elegan</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0804</div>
-     <div class="nama">J'adore Infinissime</div>
-     <div class="aroma">melati + mawar + anggrek, bunga putih mewah</div>
-    </div>
-    <div class="item">
-     <div class="kode">B 1104</div>
-     <div class="nama">Chanel No 5</div>
-     <div class="aroma">mawar + melati + aldehid, klasik bunga abadi</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
-   </div>
-   <div id="k3" class="halaman">
-    <h2>🌊 KELOMPOK 3 — Laut / Air</h2>
-    <div class="item">
-     <div class="kode">A 0905</div>
-     <div class="nama">Aqua Celeste MFK</div>
-     <div class="aroma">air biru + jeruk + bunga air, segar dingin</div>
-    </div>
-    <div class="item">
-     <div class="kode">B 1704</div>
-     <div class="nama">Cool Water Men</div>
-     <div class="aroma">air dingin + pinus + lavender, menyegarkan</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
-   </div>
-   <div id="k4" class="halaman">
-    <h2>🪵 KELOMPOK 4 — Kayu / Amber</h2>
-    <div class="item">
-     <div class="kode">A 1002</div>
-     <div class="nama">Node Zara</div>
-     <div class="aroma">kayu cendana + musk + amber, hangat modern</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0606</div>
-     <div class="nama">Bleu De Chanel</div>
-     <div class="aroma">kayu cedar + jeruk + tembakau lembut, elegan tegas</div>
-    </div>
-    <div class="item">
-     <div class="kode">B 1404</div>
-     <div class="nama">Baccarat 540</div>
-     <div class="aroma">amber + kayu + jeruk, kristal pekat hangat</div>
-    </div>
-    <div class="item">
-     <div class="kode">LV324</div>
-     <div class="nama">007 SIGN James Bond</div>
-     <div class="aroma">kayu tua + kulit + rempah, misterius tegas</div>
-    </div>
-    <div class="item">
-     <div class="kode">LV571</div>
-     <div class="nama">1 BILLION LUCKY</div>
-     <div class="aroma">kayu mewah + amber + vanila, kaya beruntung</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
-   </div>
-   <div id="k5" class="halaman">
-    <h2>🍬 KELOMPOK 5 — Manis / Gourmand</h2>
-    <div class="item">
-     <div class="kode">A 0502</div>
-     <div class="nama">Lady Million</div>
-     <div class="aroma">vanila + amber + bunga manis, mewah manis</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0807</div>
-     <div class="nama">Candy Prada</div>
-     <div class="aroma">karamel + gula merah + musk, manis permen</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
-   </div>
-   <div id="k6" class="halaman">
-    <h2>🌶️ KELOMPOK 6 — Rempah Pekat</h2>
-    <div class="item">
-     <div class="kode">A 0104</div>
-     <div class="nama">Rawdhah Ahmed</div>
-     <div class="aroma">rempah pedas + gaharu + kemenyan + kulit tua</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0204</div>
-     <div class="nama">Zaniver Asad Zanzibar</div>
-     <div class="aroma">rempah eksotis + oud + kemenyan + kayu agar</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 0704</div>
-     <div class="nama">Mukhalat Extreme</div>
-     <div class="aroma">rempah campuran + gaharu + resin pekat</div>
-    </div>
-    <div class="item">
-     <div class="kode">A 1202</div>
-     <div class="nama">Circle</div>
-     <div class="aroma">rempah melingkar + kemenyan + gaharu + kulit</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
-   </div>
-   <div id="k7" class="halaman">
-    <h2>☁️ KELOMPOK 7 — Bedak / Lembut</h2>
-    <div class="item">
-     <div class="kode">A 1705</div>
-     <div class="nama">Zwitsal Sweet</div>
-     <div class="aroma">bedak bayi lembut + bunga putih, sangat ringan</div>
-    </div>
-    <div class="bawah">
-     <a href="#beranda">🏠 Kembali ke Beranda</a>
-    </div>
+</head>
+<body>
+<div class="container">
+
+ <!-- NAVIGASI -->
+ <div class="nav-top">
+  <a href="#beranda">🏠</a>
+  <a href="#k1">Segar</a>
+  <a href="#k2">Bunga</a>
+  <a href="#k3">Laut</a>
+  <a href="#k4">Kayu</a>
+  <a href="#k5">Manis</a>
+  <a href="#k6">Rempah</a>
+  <a href="#k7">Lembut</a>
+ </div>
+
+ <!-- KELOMPOK 1 — SEGAR -->
+ <div class="kelompok" id="k1">
+  <div class="item"><span class="kode">A 0101</span>Escada Love Cherrie</div>
+  <div class="item"><span class="kode">A 0103</span>Mhz Maher Zein</div>
+  <div class="item"><span class="kode">A 0205</span>Coconut</div>
+  <div class="item"><span class="kode">A 0305</span>Scarlet</div>
+  <div class="item"><span class="kode">A 0401</span>Vs Oasis</div>
+  <div class="item"><span class="kode">A 0402</span>Wild Liberty</div>
+  <div class="item"><span class="kode">A 0503</span>Lacoste L12 In Black</div>
+  <div class="item"><span class="kode">A 0505</span>Escalade</div>
+  <div class="item"><span class="kode">A 0601</span>Issey Miyake</div>
+  <div class="item"><span class="kode">A 0602</span>Rainbow</div>
+  <div class="item"><span class="kode">A 0603</span>Aqua Di Gio</div>
+  <div class="item"><span class="kode">A 0604</span>D&G L'Imperatrice 23</div>
+  <div class="item"><span class="kode">A 0605</span>VERSACE Eros</div>
+  <div class="item"><span class="kode">A 0702</span>Silent Effect</div>
+  <div class="item"><span class="kode">A 0703</span>Aigner Second Man</div>
+  <div class="item"><span class="kode">A 0802</span>Aigner Blue Emotion</div>
+  <div class="item"><span class="kode">A 0805</span>DG Blue Intense</div>
+  <div class="item"><span class="kode">A 0902</span>Bozuku Love</div>
+  <div class="item"><span class="kode">A 1003</span>Zenzo Bali 7:15 AM</div>
+  <div class="item"><span class="kode">A 1101</span>Vanila Menggo</div>
+  <div class="item"><span class="kode">A 1103</span>Two Cruise</div>
+  <div class="item"><span class="kode">A 1203</span>Polo Sport</div>
+  <div class="item"><span class="kode">A 1301</span>Tom Ten</div>
+  <div class="item"><span class="kode">A 1302</span>Buble Gem</div>
+  <div class="item"><span class="kode">A 1402</span>CK Everyone</div>
+  <div class="item"><span class="kode">A 1503</span>Shine Forever</div>
+  <div class="item"><span class="kode">A 1506</span>DB Aqua Marien</div>
+  <div class="item"><span class="kode">A 1604</span>White Bell</div>
+  <div class="item"><span class="kode">A 1706</span>White Crystal</div>
+  <div class="item"><span class="kode">A 1802</span>Yes Laurent Y</div>
+  <div class="item"><span class="kode">A 1803</span>Splendid Change</div>
+  <div class="item"><span class="kode">B 0102</span>Metro Girl</div>
+  <div class="item"><span class="kode">B 0202</span>Aqua Di Gio</div>
+  <div class="item"><span class="kode">B 0301</span>Klint</div>
+  <div class="item"><span class="kode">B 0501</span>Sea Sage</div>
+  <div class="item"><span class="kode">B 0601</span>Fruity Musk</div>
+  <div class="item"><span class="kode">B 0702</span>Happy Hour Luzi</div>
+  <div class="item"><span class="kode">B 0802</span>Hermes H2A</div>
+  <div class="item"><span class="kode">B 0901</span>Sarah In New York</div>
+  <div class="item"><span class="kode">B 1003</span>Charlie White</div>
+  <div class="item"><span class="kode">B 1101</span>Adidas Naturally</div>
+  <div class="item"><span class="kode">B 1102</span>J'adore In Joy</div>
+  <div class="item"><span class="kode">B 1201</span>Armani Si EDT</div>
+  <div class="item"><span class="kode">B 1402</span>Oud Malaki</div>
+  <div class="item"><span class="kode">B 1502</span>X-trem Pf</div>
+  <div class="item"><span class="kode">B 1703</span>Aqua Kiss</div>
+  <div class="item"><span class="kode">B 1704</span>Cool Water / Ice Men</div>
+  <div class="item"><span class="kode">B 1802</span>Be Celcius Blossom</div>
+  <div class="item"><span class="kode">B 1804</span>Ice Men Pacific</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- KELOMPOK 2 — BUNGA -->
+ <div class="kelompok" id="k2">
+  <div class="item"><span class="kode">A 0102</span>Love Game Gold</div>
+  <div class="item"><span class="kode">A 0201</span>Burberry My Berry</div>
+  <div class="item"><span class="kode">A 0202</span>Gucci Flora</div>
+  <div class="item"><span class="kode">A 0304</span>Lonely Sarah</div>
+  <div class="item"><span class="kode">A 0404</span>Delina Exclusive</div>
+  <div class="item"><span class="kode">A 0501</span>Estee Lauder Heavenly</div>
+  <div class="item"><span class="kode">A 0701</span>Gaga Flame</div>
+  <div class="item"><span class="kode">A 0803</span>Davidoff Woman</div>
+  <div class="item"><span class="kode">A 0804</span>J'adore Infinissime</div>
+  <div class="item"><span class="kode">A 0901</span>Jo Malone Blush Peony</div>
+  <div class="item"><span class="kode">A 1005</span>VS Bombshell</div>
+  <div class="item"><span class="kode">A 1105</span>Dolce & Gabbana The Only</div>
+  <div class="item"><span class="kode">A 1206</span>Flowerbomb Tiger Lily</div>
+  <div class="item"><span class="kode">A 1304</span>Sense Chance</div>
+  <div class="item"><span class="kode">A 1505</span>Olla Ramlan Beauty</div>
+  <div class="item"><span class="kode">A 1601</span>Zenzo Flower Tag</div>
+  <div class="item"><span class="kode">A 1603</span>Loewe Dear Paula</div>
+  <div class="item"><span class="kode">A 1701</span>Narcis Rose</div>
+  <div class="item"><span class="kode">A 1702</span>Coco Mademoiselle</div>
+  <div class="item"><span class="kode">A 1703</span>Daisy Marcotte</div>
+  <div class="item"><span class="kode">A 1704</span>Zenzo Flower Tag</div>
+  <div class="item"><span class="kode">A 1705</span>Eau De Zwitsal</div>
+  <div class="item"><span class="kode">A 1707</span>Scandal Thanks</div>
+  <div class="item"><span class="kode">A 1708</span>Flower Ombre</div>
+  <div class="item"><span class="kode">A 1805</span>Armani My Own Way</div>
+  <div class="item"><span class="kode">A 1806</span>Zenzo Love</div>
+  <div class="item"><span class="kode">B 0104</span>Roze Noire</div>
+  <div class="item"><span class="kode">B 0203</span>Selina Gomez</div>
+  <div class="item"><span class="kode">B 0204</span>Dior Jasmin Angel</div>
+  <div class="item"><span class="kode">B 0302</span>YSL Mon Paris</div>
+  <div class="item"><span class="kode">B 0603</span>For Biden Rose</div>
+  <div class="item"><span class="kode">B 0701</span>Fiesta Carioca</div>
+  <div class="item"><span class="kode">B 0704</span>Live Platinum</div>
+  <div class="item"><span class="kode">B 0801</span>Wonderstruck Enchanted</div>
+  <div class="item"><span class="kode">B 0803</span>Armani Woman Arira</div>
+  <div class="item"><span class="kode">B 0902</span>Butterfly Cr</div>
+  <div class="item"><span class="kode">B 1103</span>Vanilla Rose</div>
+  <div class="item"><span class="kode">B 1104</span>Chanel No 5</div>
+  <div class="item"><span class="kode">B 1202</span>Carolina Herrera Carol Vip</div>
+  <div class="item"><span class="kode">B 1203</span>Still Jennifer Lopez</div>
+  <div class="item"><span class="kode">B 1204</span>Anna Sui Anabella</div>
+  <div class="item"><span class="kode">B 1302</span>Pink Chiffon</div>
+  <div class="item"><span class="kode">B 1304</span>Bombshell Intense</div>
+  <div class="item"><span class="kode">B 1401</span>Romantic</div>
+  <div class="item"><span class="kode">B 1405</span>Les Sables Roses</div>
+  <div class="item"><span class="kode">B 1503</span>Olla Ramlan Beauty</div>
+  <div class="item"><span class="kode">B 1504</span>Justin Bieber One Day</div>
+  <div class="item"><span class="kode">B 1602</span>One Direction One Moment</div>
+  <div class="item"><span class="kode">B 1603</span>Miss Fera</div>
+  <div class="item"><span class="kode">B 1701</span>Scandal Scan Secret</div>
+  <div class="item"><span class="kode">B 1801</span>Aigner Starlight</div>
+  <div class="item"><span class="kode">B 1803</span>Diamor Women</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- KELOMPOK 3 — LAUT -->
+ <div class="kelompok" id="k3">
+  <div class="item"><span class="kode">A 0301</span>Organize</div>
+  <div class="item"><span class="kode">A 0504</span>Lazy Holiday</div>
+  <div class="item"><span class="kode">A 0905</span>Aqua Celeste MFK</div>
+  <div class="item"><span class="kode">A 1403</span>Bvlgari Glacil Men</div>
+  <div class="item"><span class="kode">A 1406</span>Bahama Passion</div>
+  <div class="item"><span class="kode">A 1502</span>Erba Pura</div>
+  <div class="item"><span class="kode">B 0303</span>Montblanc Exploration</div>
+  <div class="item"><span class="kode">B 0804</span>Ocean California</div>
+  <div class="item"><span class="kode">B 1301</span>Bvlgari Oceanus</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- KELOMPOK 4 — KAYU -->
+ <div class="kelompok" id="k4">
+  <div class="item"><span class="kode">A 0105</span>Body Musk</div>
+  <div class="item"><span class="kode">A 0203</span>Harley</div>
+  <div class="item"><span class="kode">A 0206</span>Amber Samsara</div>
+  <div class="item"><span class="kode">A 0302</span>Vic Shel</div>
+  <div class="item"><span class="kode">A 0303</span>Midnight</div>
+  <div class="item"><span class="kode">A 0403</span>Yellow Amber</div>
+  <div class="item"><span class="kode">A 0405</span>Silent Effect</div>
+  <div class="item"><span class="kode">A 0606</span>Bleu De Chanel</div>
+  <div class="item"><span class="kode">A 0705</span>Bull Antique</div>
+  <div class="item"><span class="kode">A 0903</span>Zara Man Black</div>
+  <div class="item"><span class="kode">A 1002</span>Node Zara</div>
+  <div class="item"><span class="kode">A 1204</span>Creed Aventus Juventus</div>
+  <div class="item"><span class="kode">A 1404</span>Boss Bottled Night Tour</div>
+  <div class="item"><span class="kode">A 1605</span>Santal 33 Le Labo</div>
+  <div class="item"><span class="kode">A 1709</span>The Cachemire</div>
+  <div class="item"><span class="kode">A 1702</span>Invite Men</div>
+  <div class="item"><span class="kode">A 1801</span>Passion Coco</div>
+  <div class="item"><span class="kode">B 0101</span>Librero</div>
+  <div class="item"><span class="kode">B 0103</span>Paco Rabanne Invictus</div>
+  <div class="item"><span class="kode">B 0201</span>31 Reve</div>
+  <div class="item"><span class="kode">B 0403</span>Secret Bloom</div>
+  <div class="item"><span class="kode">B 0703</span>Bvlgari Black Bull</div>
+  <div class="item"><span class="kode">B 0903</span>1bilion Lucky</div>
+  <div class="item"><span class="kode">B 1403</span>Versace Eros Erick</div>
+  <div class="item"><span class="kode">B 1404</span>Baccarat 540</div>
+  <div class="item"><span class="kode">B 1604</span>Paco Rabanne XS Pure</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- KELOMPOK 5 — MANIS -->
+ <div class="kelompok" id="k5">
+  <div class="item"><span class="kode">A 0502</span>Lady Million</div>
+  <div class="item"><span class="kode">A 0801</span>Angel Thunder</div>
+  <div class="item"><span class="kode">A 0807</span>Candy Prada</div>
+  <div class="item"><span class="kode">A 0808</span>Elixir Pure</div>
+  <div class="item"><span class="kode">A 1001</span>Vanilla Cake</div>
+  <div class="item"><span class="kode">A 1201</span>Ariana Grande Cloud</div>
+  <div class="item"><span class="kode">A 1303</span>Paris Hilton Hot Paris</div>
+  <div class="item"><span class="kode">A 1501</span>One Plate</div>
+  <div class="item"><span class="kode">B 0304</span>Vanilla Cake</div>
+  <div class="item"><span class="kode">B 0503</span>Black Opium Pavot</div>
+  <div class="item"><span class="kode">B 0602</span>Britney Spears Fantasia</div>
+  <div class="item"><span class="kode">B 1002</span>Ariana Grande Sweet Like Candy</div>
+  <div class="item"><span class="kode">B 1702</span>Vanilla Body</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- KELOMPOK 6 — REMPAH -->
+ <div class="kelompok" id="k6">
+  <div class="item"><span class="kode">A 0104</span>Rawdhah Ahmed</div>
+  <div class="item"><span class="kode">A 0204</span>Zaniver Asad Zanzibar</div>
+  <div class="item"><span class="kode">A 0704</span>Mukhalat Extreme</div>
+  <div class="item"><span class="kode">A 1202</span>Circle</div>
+  <div class="item"><span class="kode">A 1405</span>Dior Homme Wild Eagle</div>
+  <div class="item"><span class="kode">A 1504</span>Silent Effect</div>
+  <div class="item"><span class="kode">A 1710</span>Red Desert Desire</div>
+  <div class="item"><span class="kode">A 1711</span>Vocal Unique Volcanique</div>
+  <div class="item"><span class="kode">A 1703</span>Light Blue Discover Vulcano</div>
+  <div class="item"><span class="kode">B 0502</span>Rafi Ahmad</div>
+  <div class="item"><span class="kode">B 1001</span>Axe Africa</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- KELOMPOK 7 — LEMBUT / BERSIH / ELEGAN (kode B XX04) -->
+ <div class="kelompok" id="k7">
+  <div class="item"><span class="kode">B 0104</span>Clean Warm Cotton — kapas bersih, lembut hangat</div>
+  <div class="item"><span class="kode">B 0204</span>Burberry Her — bunga lembut + musk bersih, anggun</div>
+  <div class="item"><span class="kode">B 0304</span>Zara White Musk — wangi kulit bersih, sederhana menawan</div>
+  <div class="item"><span class="kode">B 0404</span>Issey Miyake L'Eau d'Issey — air lembut, bunga putih, tenang</div>
+  <div class="item"><span class="kode">B 0504</span>Clinique Happy — ringan, bersih, cerah lembut</div>
+  <div class="item"><span class="kode">B 0604</span>Dior Diorissimo — melati murni, sangat halus anggun</div>
+  <div class="item"><span class="kode">B 0704</span>Nina Ricci L'Air du Temps — melati putih, lembut legendaris</div>
+  <div class="item"><span class="kode">B 0804</span>Bvlgari Voile de Jasmin — melati tipis, halus seperti sutra</div>
+  <div class="item"><span class="kode">B 0904</span>Chanel Cristalle Eau Verte — segar lembut, elegan sederhana</div>
+  <div class="item"><span class="kode">B 1004</span>Guerlain Mon Guerlain — vanila lembut + lavender halus</div>
+  <div class="item"><span class="kode">B 1104</span>Prada Infusion d'Iris — iris halus, bersih, elegan abadi</div>
+  <div class="item"><span class="kode">B 1204</span>Jo Malone Wild Bluebell — bunga segar lembut, tidak berat</div>
+  <div class="item"><span class="kode">B 1304</span>Armani Acqua Di Gioia — segar lembut, bunga air</div>
+  <div class="item"><span class="kode">B 1404</span>Versace Bright Crystal — bersih cerah, lembut elegan</div>
+  <div class="item"><span class="kode">B 1504</span>Bottega Veneta Essence — halus, alami, anggun</div>
+  <a href="#beranda" class="btn-home">🔝 Kembali ke Beranda</a>
+ </div>
+
+ <!-- BERANDA — TANPA TOMBOL KEMBALI -->
+ <div class="beranda" id="beranda">
+  <h1>ATLANTIC</h1>
+  <h2>PERFUME</h2>
+  <div class="garis"></div>
+  <p class="slogan">Temukan wangi yang mencerminkan kepribadianmu</p>
+  <p class="kutipan">Hidup adalah keselarasan hati dan jiwa. Seperti aroma yang membalut tubuh, wangi yang tepat selaras dengan kepribadianmu.</p>
+
+  <div class="info">
+   <h3>ℹ️ Informasi Harga:</h3>
+   <ul>
+    <li>• Kualitas Standar & Ekonomis: Rp 2.500 – Rp 3.500 per ml</li>
+    <li>• Kualitas Premium: Rp 4.000 – Rp 7.000 per ml</li>
+    <li>• Diskon 5% untuk pesanan 50 ml<br>• Diskon 10% untuk pesanan 100 ml ke atas</li>
+   </ul>
+   <div class="kontak">
+    <p>Untuk pesanan pasti & konsultasi aroma:</p>
+    <a href="https://wa.me/6289676100177">+62 896-7610-0177 (WhatsApp)</a>
    </div>
   </div>
- </body>
-</html>
+ </div>
+
+</div>
+</body>
+   </html>
+ 
