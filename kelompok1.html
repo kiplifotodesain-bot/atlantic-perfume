@@ -3,102 +3,76 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Kelompok 1 — Sitrus Segar | ATLANTIC PARFUME</title>
+ <title>SEGAR | ATLANTIC PARFUME</title>
  <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
-body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff;line-height:1.6;padding:16px;padding-top:160px}
-.container{max-width:720px;margin:0 auto}
-.nav-wrapper{position:fixed;top:0;left:0;right:0;background:#0f1a2f;padding:12px 16px 14px;z-index:999;border-bottom:1px solid #f8d77c40}
-.nav-logo{max-width:720px;margin:0 auto 12px;text-align:center}
-.nav-logo h2{font-size:1.45em;color:#f8d77c;letter-spacing:2.5px;text-transform:uppercase;font-weight:normal;width:100%}
-.nav-inner{max-width:720px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.nav-inner a{display:flex;align-items:center;justify-content:center;padding:10px 6px;border-radius:20px;text-decoration:none;font-size:0.85em;transition:all .25s;border:1px solid #f8d77c;color:#f8d77c;background:transparent;height:44px;line-height:1.2;text-align:center}
-.nav-inner a.aktif{background:#f8d77c;color:#0f172a;font-weight:bold}
-.judul-halaman{text-align:center;font-size:1.3em;color:#f8d77c;margin:30px 0 15px;padding-bottom:8px;border-bottom:1px solid #f8d77c40}
-table{width:100%;border-collapse:collapse;margin-bottom:30px;background:#ffffff08;border-radius:8px;overflow:hidden}
+html,body{height:100%}
+body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
+.container{max-width:720px;margin:0 auto;padding:0 16px}
+.kepala{text-align:center;padding:15px 10px 10px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0f1a2f,#152238ee)}
+.logo h1{font-size:2em;color:#f8d77c;letter-spacing:2px;text-transform:uppercase}
+.tagline{color:#fff;font-size:1em;margin:6px 0 10px}
+.garis{border-bottom:1px solid #f8d77c50;margin-bottom:8px}
+.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
+.nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:20px;text-decoration:none;font-size:0.88em;transition:all .25s;border:1px solid #f8d77c;height:42px;line-height:1.2;text-align:center;cursor:pointer}
+.nav a.aktif{background:#f8d77c;color:#0f172a;font-weight:bold}
+.nav a:not(.aktif){background:transparent;color:#f8d77c}
+.nav .baris-akhir{grid-column:span 3;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.judul-halaman{text-align:center;font-size:1.3em;color:#f8d77c;margin:10px 0 15px;padding-bottom:6px;border-bottom:1px solid #f8d77c40}
+table{width:100%;border-collapse:collapse;margin-bottom:10px;background:#ffffff08;border-radius:8px;overflow:hidden}
 th{background:#f8d77c20;color:#f8d77c;padding:8px 6px;text-align:left;font-size:0.9em}
-td{padding:7px 6px;border-bottom:1px solid #ffffff0a;font-size:0.9em}
+td{padding:7px 6px;border-bottom:1px solid #ffffff0a;font-size:0.92em;line-height:1.4}
 td:first-child{color:#f8d77c;font-weight:bold;white-space:nowrap;width:110px}
-.kembali{text-align:center;margin:20px 0}
-.kembali a{display:inline-block;color:#f8d77c;text-decoration:none;border:1px solid #f8d77c;padding:9px 22px;border-radius:20px}
+.kembali{margin-top:25px;text-align:center}
+.kembali a{display:inline-block;color:#f8d77c;text-decoration:none;border:1px solid #f8d77c;padding:9px 22px;border-radius:20px;cursor:pointer}
  </style>
 </head>
 <body>
- <div class="nav-wrapper">
-  <div class="nav-logo"><h2>ATLANTIC PARFUME</h2></div>
-  <div class="nav-inner">
-   <a href="index.html">Beranda</a>
-   <a href="kelompok1.html" class="aktif">Sitrus Segar</a>
-   <a href="kelompok2.html">Bunga & Elegan</a>
-   <a href="kelompok3.html">Kayu & Mewah</a>
-   <a href="kelompok4.html">Manis & Legenda</a>
-   <a href="kelompok5.html">Rempah & Kuat</a>
-   <a href="kelompok6.html">Air & Segar</a>
-   <a href="kelompok7.html">Terpopuler & Klasik</a>
-   <a href="info.html">Alamat Toko</a>
-  </div>
+<div class="container">
+ <div class="kepala">
+  <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
+  <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
+  <div class="garis"></div>
+  <nav class="nav">
+   <a href="index.html">BERANDA</a>
+   <a href="kelompok1.html" class="aktif">SEGAR</a>
+   <a href="kelompok2.html">BUNGA</a>
+   <a href="kelompok3.html">KAYU</a>
+   <a href="kelompok4.html">MANIS</a>
+   <a href="kelompok5.html">REMPAH</a>
+   <div class="baris-akhir">
+    <a href="kelompok6.html">SEGAR</a>
+    <a href="kelompok7.html">POPULER</a>
+    <a href="info.html">ALAMAT</a>
+   </div>
+  </nav>
  </div>
 
- <div class="container">
-  <h2 class="judul-halaman">KELOMPOK 1 — SITRUS & WANGI SEGAR</h2>
-  <table>
-   <tr><th>Kode</th><th>Nama Produk</th><th>Karakter Aroma</th></tr>
-   <tr><td>A 0101</td><td>Jeruk Nipis Murni</td><td>Jeruk nipis segar, asam segar</td></tr>
-   <tr><td>B 0101</td><td>Jeruk Nipis & Mint</td><td>Jeruk nipis dan mint, segar menenangkan</td></tr>
-   <tr><td>A 0102</td><td>Jeruk Bali</td><td>Jeruk bali manis, segar tropis</td></tr>
-   <tr><td>B 0102</td><td>Jeruk & Mawar</td><td>Jeruk dan mawar, segar harum</td></tr>
-   <tr><td>A 0103</td><td>Jeruk Purut</td><td>Jeruk purut, harum kuat segar</td></tr>
-   <tr><td>B 0103</td><td>Jeruk Purut & Kayu</td><td>Jeruk purut dan kayu, segar hangat</td></tr>
-   <tr><td>A 0104</td><td>Jeruk Manis</td><td>Jeruk manis, lembut segar</td></tr>
-   <tr><td>B 0104</td><td>Jeruk & Vanila</td><td>Jeruk dan vanila, segar manis</td></tr>
-   <tr><td>A 0105</td><td>Jeruk & Madu</td><td>Jeruk dan madu, segar manis</td></tr>
-   <tr><td>B 0105</td><td>Jeruk & Air</td><td>Jeruk dan air, segar bersih</td></tr>
-   <tr><td>A 0201</td><td>Limau Purut</td><td>Limau purut, harum kuat segar</td></tr>
-   <tr><td>B 0201</td><td>Limau & Mint</td><td>Limau dan mint, segar menenangkan</td></tr>
-   <tr><td>A 0202</td><td>Limau & Kayu</td><td>Limau dan kayu, segar hangat</td></tr>
-   <tr><td>B 0202</td><td>Limau & Bunga</td><td>Limau dan bunga, segar harum</td></tr>
-   <tr><td>A 0203</td><td>Limau & Vanila</td><td>Limau dan vanila, segar manis</td></tr>
-   <tr><td>B 0203</td><td>Limau & Madu</td><td>Limau dan madu, segar manis</td></tr>
-   <tr><td>A 0204</td><td>Limau & Air</td><td>Limau dan air, segar bersih</td></tr>
-   <tr><td>B 0204</td><td>Limau & Rempah</td><td>Limau dan rempah, segar beraroma</td></tr>
-   <tr><td>A 0205</td><td>Limau & Kesturi</td><td>Limau dan kesturi, segar lembut</td></tr>
-   <tr><td>B 0205</td><td>Limau & Ambar</td><td>Limau dan ambar, segar hangat</td></tr>
-   <tr><td>A 0301</td><td>Jeruk & Kayu</td><td>Jeruk dan kayu, segar hangat</td></tr>
-   <tr><td>B 0301</td><td>Jeruk & Bunga</td><td>Jeruk dan bunga, segar harum</td></tr>
-   <tr><td>A 0302</td><td>Jeruk & Vanila</td><td>Jeruk dan vanila, segar manis</td></tr>
-   <tr><td>B 0302</td><td>Jeruk & Madu</td><td>Jeruk dan madu, segar manis</td></tr>
-   <tr><td>A 0303</td><td>Jeruk & Air</td><td>Jeruk dan air, segar bersih</td></tr>
-   <tr><td>B 0303</td><td>Jeruk & Rempah</td><td>Jeruk dan rempah, segar beraroma</td></tr>
-   <tr><td>A 0304</td><td>Jeruk & Kesturi</td><td>Jeruk dan kesturi, segar lembut</td></tr>
-   <tr><td>B 0304</td><td>Jeruk & Ambar</td><td>Jeruk dan ambar, segar hangat</td></tr>
-   <tr><td>A 0305</td><td>Jeruk & Cendana</td><td>Jeruk dan cendana, segar lembut</td></tr>
-   <tr><td>B 0305</td><td>Jeruk & Gaharu</td><td>Jeruk dan gaharu, segar mewah</td></tr>
-   <tr><td>A 0401</td><td>Limau & Cendana</td><td>Limau dan cendana, segar lembut</td></tr>
-   <tr><td>B 0401</td><td>Limau & Gaharu</td><td>Limau dan gaharu, segar mewah</td></tr>
-   <tr><td>A 0402</td><td>Limau & Bunga</td><td>Limau dan bunga, segar harum</td></tr>
-   <tr><td>B 0402</td><td>Limau & Kayu</td><td>Limau dan kayu, segar hangat</td></tr>
-   <tr><td>A 0403</td><td>Limau & Vanila</td><td>Limau dan vanila, segar manis</td></tr>
-   <tr><td>B 0403</td><td>Limau & Madu</td><td>Limau dan madu, segar manis</td></tr>
-   <tr><td>A 0404</td><td>Limau & Air</td><td>Limau dan air, segar bersih</td></tr>
-   <tr><td>B 0404</td><td>Limau & Rempah</td><td>Limau dan rempah, segar beraroma</td></tr>
-   <tr><td>A 0405</td><td>Limau & Kesturi</td><td>Limau dan kesturi, segar lembut</td></tr>
-   <tr><td>B 0405</td><td>Limau & Ambar</td><td>Limau dan ambar, segar hangat</td></tr>
-   <tr><td>A 0501</td><td>Jeruk & Bunga</td><td>Jeruk dan bunga, segar harum</td></tr>
-   <tr><td>B 0501</td><td>Jeruk & Kayu</td><td>Jeruk dan kayu, segar hangat</td></tr>
-   <tr><td>A 0502</td><td>Jeruk & Vanila</td><td>Jeruk dan vanila, segar manis</td></tr>
-   <tr><td>B 0502</td><td>Jeruk & Madu</td><td>Jeruk dan madu, segar manis</td></tr>
-   <tr><td>A 0503</td><td>Jeruk & Air</td><td>Jeruk dan air, segar bersih</td></tr>
-   <tr><td>B 0503</td><td>Jeruk & Rempah</td><td>Jeruk dan rempah, segar beraroma</td></tr>
-   <tr><td>A 0504</td><td>Jeruk & Kesturi</td><td>Jeruk dan kesturi, segar lembut</td></tr>
-   <tr><td>B 0504</td><td>Jeruk & Ambar</td><td>Jeruk dan ambar, segar hangat</td></tr>
-   <tr><td>A 0505</td><td>Jeruk & Cendana</td><td>Jeruk dan cendana, segar lembut</td></tr>
-   <tr><td>B 0505</td><td>Jeruk & Gaharu</td><td>Jeruk dan gaharu, segar mewah</td></tr>
-  </table>
-
-  <div class="kembali">
-   <a href="index.html">Kembali ke Beranda</a>
-  </div>
- </div>
+ <h2 class="judul-halaman">🍊 SITRUS SEGAR — Baris 01–02 (20 Varian)</h2>
+ <table>
+  <tr><th>Kode</th><th>Nama Parfum</th><th>Karakter Aroma</th></tr>
+  <tr><td>A 0101</td><td>Chanel Allure Homme Sport</td><td>Jeruk segar, kayu ringan, bersih</td></tr>
+  <tr><td>A 0102</td><td>Dior Sauvage</td><td>Jeruk, rempah, lavender, tegas maskulin</td></tr>
+  <tr><td>A 0103</td><td>Acqua Di Gio Armani</td><td>Jeruk, air laut, melati, sejuk bersih</td></tr>
+  <tr><td>A 0104</td><td>Issey Miyake L'Eau</td><td>Teratai, jeruk, air, segar murni</td></tr>
+  <tr><td>A 0105</td><td>Bvlgari Aqua</td><td>Jeruk, air, alga, segar dingin</td></tr>
+  <tr><td>A 0201</td><td>Versace Man Eau Fraîche</td><td>Jeruk nipis, kayu, air, ringan segar</td></tr>
+  <tr><td>A 0202</td><td>Davidoff Cool Water</td><td>Air dingin, pinus, lavender, menyegarkan</td></tr>
+  <tr><td>A 0203</td><td>Hugo Boss Bottled Tonic</td><td>Jeruk, jahe, kayu, segar tegas</td></tr>
+  <tr><td>A 0204</td><td>Calvin Klein CK One</td><td>Jeruk, daun, segar bersih uniseks</td></tr>
+  <tr><td>A 0205</td><td>Lacoste L.12.12 Blanc</td><td>Jeruk, daun, segar bersih elegan</td></tr>
+  <tr><td>B 0101</td><td>Escada Love Cherrie</td><td>Jeruk + buah segar, ringan</td></tr>
+  <tr><td>B 0102</td><td>Mahir Zein Mhz</td><td>Jeruk segar + herbal lembut</td></tr>
+  <tr><td>B 0103</td><td>Scarlet</td><td>Jeruk + buah merah segar</td></tr>
+  <tr><td>B 0104</td><td>VS Oasis</td><td>Jeruk segar, air, bersih</td></tr>
+  <tr><td>B 0105</td><td>Aqua Kiss</td><td>Jeruk nipis, mint, bunga air, segar</td></tr>
+  <tr><td>B 0201</td><td>Wild Liberty</td><td>Jeruk segar, bunga liar, bebas</td></tr>
+  <tr><td>B 0202</td><td>Lacoste L12 In Black</td><td>Jeruk, daun, segar tegas</td></tr>
+  <tr><td>B 0203</td><td>Escalade</td><td>Jeruk, herbal, segar elegan</td></tr>
+  <tr><td>B 0204</td><td>Rainbow</td><td>Jeruk campuran, cerah segar</td></tr>
+  <tr><td>B 0205</td><td>Aqua Celeste MFK</td><td>Jeruk terang, ringan, mewah segar</td></tr>
+ </table>
+ <div class="kembali"><a href="index.html">← Kembali ke Beranda</a></div>
+</div>
 </body>
 </html>
-
