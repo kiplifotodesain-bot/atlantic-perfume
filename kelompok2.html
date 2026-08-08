@@ -3,77 +3,118 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>BUNGA | ATLANTIC PARFUME</title>
+ <title>ATLANTIC PERFUME | BUNGA — Elegan</title>
  <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
 html,body{height:100%}
-body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
+body{background:#0f2040;color:#fff;line-height:1.6;padding-top:100px}
 .container{max-width:720px;margin:0 auto;padding:0 16px}
-.kepala{text-align:center;padding:15px 10px 10px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0f1a2f,#152238ee)}
-.logo h1{font-size:2em;color:#f8d77c;letter-spacing:2px;text-transform:uppercase}
-.tagline{color:#fff;font-size:1em;margin:6px 0 10px}
-.garis{border-bottom:1px solid #f8d77c50;margin-bottom:8px}
-.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-.nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:20px;text-decoration:none;font-size:0.88em;transition:all .25s;border:1px solid #f8d77c;height:42px;line-height:1.2;text-align:center;cursor:pointer}
-.nav a.aktif{background:#f8d77c;color:#0f172a;font-weight:bold}
-.nav a:not(.aktif){background:transparent;color:#f8d77c}
-.nav .baris-akhir{grid-column:span 3;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.judul-halaman{text-align:center;font-size:1.3em;color:#f8d77c;margin:10px 0 15px;padding-bottom:6px;border-bottom:1px solid #f8d77c40}
-table{width:100%;border-collapse:collapse;margin-bottom:10px;background:#ffffff08;border-radius:8px;overflow:hidden}
-th{background:#f8d77c20;color:#f8d77c;padding:8px 6px;text-align:left;font-size:0.9em}
-td{padding:7px 6px;border-bottom:1px solid #ffffff0a;font-size:0.92em;line-height:1.4}
+
+/* === BAGIAN ATAS — MENEMPEL DIAM === */
+.kepala{position:fixed;top:0;left:0;right:0;z-index:9999;background:#0f2040;padding:12px 15px 12px}
+.kepala .isi-kepala{max-width:720px;margin:0 auto;position:relative}
+
+/* === TOMBOL MENU === */
+.tombol-menu{position:absolute;left:0;top:4px;font-size:1.5em;color:#f8d77c;cursor:pointer;padding:2px 8px;line-height:1;border:1px solid #f8d77c50;border-radius:6px}
+
+/* === LOGO === */
+.logo{text-align:center;padding-left:15px}
+.logo h1{font-size:1.1em;color:#f8d77c;letter-spacing:1px;text-transform:uppercase;font-weight:normal;white-space:nowrap}
+
+/* === TULISAN TAGLINE === */
+.tagline{text-align:center;font-size:0.9em;color:#e0e0e0;margin:10px 0 8px;padding-left:0}
+
+/* === GARIS PUTIH === */
+.garis-bawah{width:65%;height:1px;background:#ffffff;margin:0 auto}
+
+/* === JUDUL & TABEL === */
+.judul-halaman{text-align:center;font-size:1.25em;color:#f8d77c;margin:15px 0;padding-bottom:8px;border-bottom:1px solid #ffffff30}
+table{width:100%;border-collapse:collapse;margin:15px 0 40px;background:#ffffff08;border-radius:8px;overflow:hidden}
+th{background:#f8d77c20;color:#f8d77c;padding:9px 7px;text-align:left;font-size:0.9em}
+td{padding:8px 7px;border-bottom:1px solid #ffffff0a;font-size:0.92em;line-height:1.4}
 td:first-child{color:#f8d77c;font-weight:bold;white-space:nowrap;width:110px}
-.kembali{margin-top:25px;text-align:center}
-.kembali a{display:inline-block;color:#f8d77c;text-decoration:none;border:1px solid #f8d77c;padding:9px 22px;border-radius:20px;cursor:pointer}
+
+/* === MENU SAMPING === */
+.menu-latar{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:99999;display:none}
+.menu-latar.buka{display:block}
+.menu-kotak{position:fixed;top:0;left:0;width:260px;height:100%;background:#152238;z-index:100000;padding:20px;border-right:1px solid #f8d77c40;transform:translateX(-100%);transition:transform 0.3s ease}
+.menu-kotak.buka{transform:translateX(0)}
+.menu-tutup{text-align:right;color:#f8d77c;font-size:1.5em;cursor:pointer;margin-bottom:20px}
+.menu-judul{color:#f8d77c;font-size:1.1em;margin-bottom:15px;padding-bottom:10px;border-bottom:1px solid #f8d77c30}
+.menu-item{display:block;color:#fff;text-decoration:none;padding:10px 12px;margin-bottom:5px;border-radius:6px;transition:all 0.2s}
+.menu-item:hover{background:#f8d77c15;color:#f8d77c}
+.menu-item.aktif{background:#f8d77c25;color:#f8d77c;font-weight:bold}
  </style>
 </head>
 <body>
-<div class="container">
- <div class="kepala">
-  <div class="logo"><h1>ATLANTIC PARFUME</h1></div>
-  <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
-  <div class="garis"></div>
-  <nav class="nav">
-   <a href="index.html">BERANDA</a>
-   <a href="kelompok1.html">SEGAR</a>
-   <a href="kelompok2.html" class="aktif">BUNGA</a>
-   <a href="kelompok3.html">KAYU</a>
-   <a href="kelompok4.html">MANIS</a>
-   <a href="kelompok5.html">REMPAH</a>
-   <div class="baris-akhir">
-    <a href="kelompok6.html">SEGAR</a>
-    <a href="kelompok7.html">POPULER</a>
-    <a href="info.html">ALAMAT</a>
-   </div>
-  </nav>
- </div>
 
- <h2 class="judul-halaman">🌸 BUNGA LEMBUT — Baris 03–04 (20 Varian)</h2>
+<div class="menu-latar" id="menuLatar" onclick="tutupMenu()"></div>
+<div class="menu-kotak" id="menuKotak">
+ <div class="menu-tutup" onclick="tutupMenu()">✕</div>
+ <div class="menu-judul">DAFTAR VARIAN</div>
+ <a href="index.html" class="menu-item">🏠 BERANDA</a>
+ <a href="kelompok1.html" class="menu-item">🍊 SEGAR — Sitrus</a>
+ <a href="kelompok2.html" class="menu-item aktif">🌸 BUNGA — Elegan</a>
+ <a href="kelompok3.html" class="menu-item">🪵 KAYU — Mewah</a>
+ <a href="kelompok4.html" class="menu-item">🍬 MANIS — Legenda</a>
+ <a href="kelompok5.html" class="menu-item">🌶️ REMPAH — Kuat</a>
+ <a href="kelompok6.html" class="menu-item">🌊 SEGAR — Laut</a>
+ <a href="kelompok7.html" class="menu-item">🔥 TERLARIS</a>
+ <a href="info.html" class="menu-item">ℹ️ INFO TOKO</a>
+</div>
+
+<!-- BAGIAN ATAS -->
+<div class="kepala">
+ <div class="isi-kepala">
+  <span class="tombol-menu" onclick="bukaMenu()">☰</span>
+  <div class="logo">
+   <h1>ATLANTIC PERFUME</h1>
+  </div>
+  <p class="tagline">Temukan Wangi yang Mencerminkan Dirimu</p>
+  <div class="garis-bawah"></div>
+ </div>
+</div>
+
+<!-- ISI HALAMAN -->
+<div class="container">
+ <h2 class="judul-halaman">🌸 BUNGA — ELEGAN</h2>
  <table>
   <tr><th>Kode</th><th>Nama Parfum</th><th>Karakter Aroma</th></tr>
-  <tr><td>A 0301</td><td>Chanel Coco Mademoiselle</td><td>Mawar, jeruk, murni elegan</td></tr>
-  <tr><td>A 0302</td><td>Dior J'adore</td><td>Melati, mawar, anggrek, emas mewah</td></tr>
-  <tr><td>A 0303</td><td>YSL Black Opium</td><td>Kopi, vanila, bunga, menggoda</td></tr>
-  <tr><td>A 0304</td><td>Gucci Bloom</td><td>Melati, akar anggrek, bunga putih pekat</td></tr>
-  <tr><td>A 0305</td><td>Versace Bright Crystal</td><td>Pivoine, melati, jeruk, cerah lembut</td></tr>
-  <tr><td>A 0401</td><td>Lancôme La Vie Est Belle</td><td>Bunga, manis, praline, bahagia</td></tr>
-  <tr><td>A 0402</td><td>Elie Saab Le Parfum</td><td>Melati, jeruk, madu, lembut mewah</td></tr>
-  <tr><td>A 0403</td><td>Valentino Donna</td><td>Mawar, ambar, kayu, anggun mendalam</td></tr>
-  <tr><td>A 0404</td><td>Dior Hypnotic Poison</td><td>Vanila, almond, melati, memikat</td></tr>
+  <tr><td>A 0301</td><td>Chanel Coco Mademoiselle</td><td>Mawar, melati, jeruk, anggun berkelas</td></tr>
+  <tr><td>A 0302</td><td>Dior J'adore</td><td>Melati, mawar, anggrek, mewah mempesona</td></tr>
+  <tr><td>A 0303</td><td>YSL Parisienne</td><td>Mawar, melati, buah, romantis lembut</td></tr>
+  <tr><td>A 0304</td><td>Givenchy L'Interdit</td><td>Mawar, melati, putih, terlarang indah</td></tr>
+  <tr><td>A 0305</td><td>Kenzo Flower</td><td>Poppy, mawar, vanila, unik lembut</td></tr>
+  <tr><td>A 0401</td><td>Estée Lauder Beautiful</td><td>Mawar, melati, lili, romantis abadi</td></tr>
+  <tr><td>A 0402</td><td>Calvin Klein Eternity</td><td>Mawar, melati, herbal, abadi tulus</td></tr>
+  <tr><td>A 0403</td><td>Burberry Body</td><td>Mawar, melati, buah, lembut elegan</td></tr>
+  <tr><td>A 0404</td><td>Dior Hypnotic Poison</td><td>Vanila, almond, melati, memikat hangat</td></tr>
   <tr><td>A 0405</td><td>Guerlain Shalimar</td><td>Vanila, jeruk, rempah, legenda abadi</td></tr>
-  <tr><td>B 0301</td><td>Tiziana Terenzi</td><td>Bunga langka, buah, ambar, mewah</td></tr>
-  <tr><td>B 0302</td><td>Xerjoff Erba Pura</td><td>Buah segar, bunga putih, musky, cerah</td></tr>
-  <tr><td>B 0303</td><td>Burberry Brit</td><td>Almond, mawar, kayu, manis santai</td></tr>
-  <tr><td>B 0304</td><td>Bottega Veneta</td><td>Bunga, manis lembut, elegan halus</td></tr>
-  <tr><td>B 0305</td><td>Nina Ricci L'Air du Temps</td><td>Melati, mawar, cengkeh, burung merpati</td></tr>
-  <tr><td>B 0401</td><td>Cacharel Anaïs Anaïs</td><td>Melati, mawar, segar lembut klasik</td></tr>
-  <tr><td>B 0402</td><td>YSL Paris</td><td>Bunga, mawar, segar klasik Prancis</td></tr>
-  <tr><td>B 0403</td><td>Guerlain Mitsouko</td><td>Buah persik, kayu, rempah, abadi misteri</td></tr>
-  <tr><td>B 0404</td><td>Rochas Femme</td><td>Buah, bunga, rempah, klasik elegan</td></tr>
-  <tr><td>B 0405</td><td>Fendi Theorema</td><td>Bunga, kayu, ambar, mewah klasik</td></tr>
+  <tr><td>B 0301</td><td>Chanel N°5</td><td>Aldehid, mawar, melati, legenda abadi</td></tr>
+  <tr><td>B 0302</td><td>Gucci Bloom</td><td>Melati, akar wangi, bunga putih, subur memikat</td></tr>
+  <tr><td>B 0303</td><td>Armani Si</td><td>Mawar, buah, madu, percaya diri anggun</td></tr>
+  <tr><td>B 0304</td><td>Prada Infusion de Fleur</td><td>Mawar, jeruk, lembut tenang</td></tr>
+  <tr><td>B 0305</td><td>Valentino Voce Viva</td><td>Mawar, melati, jeruk, anggun bersinar</td></tr>
+  <tr><td>B 0401</td><td>Lancôme Trésor</td><td>Mawar, melati, buah, cinta abadi</td></tr>
+  <tr><td>B 0402</td><td>YSL Mon Paris</td><td>Mawar, stroberi, peony, cinta mempesona</td></tr>
+  <tr><td>B 0403</td><td>Elie Saab Le Parfum</td><td>Mawar, melati, madu, lembut mewah</td></tr>
+  <tr><td>B 0404</td><td>Carolina Herrera Good Girl</td><td>Mawar, melati, kakao, anggun berani</td></tr>
+  <tr><td>B 0405</td><td>Versace Bright Crystal</td><td>Pion, melati, jeruk, cerah berkilau</td></tr>
  </table>
- <div class="kembali"><a href="index.html">← Kembali ke Beranda</a></div>
 </div>
+
+<script>
+function bukaMenu(){
+ document.getElementById('menuKotak').classList.add('buka')
+ document.getElementById('menuLatar').classList.add('buka')
+ document.body.style.overflow='hidden'
+}
+function tutupMenu(){
+ document.getElementById('menuKotak').classList.remove('buka')
+ document.getElementById('menuLatar').classList.remove('buka')
+ document.body.style.overflow=''
+}
+</script>
+
 </body>
-       </html>
-                                                   
+</html>
