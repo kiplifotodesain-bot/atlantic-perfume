@@ -11,7 +11,7 @@ body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
 .container{max-width:720px;margin:0 auto;padding:0 16px}
 .kepala{text-align:center;padding:15px 10px 10px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0f1a2f,#152238ee)}
 .logo{text-align:center;margin-bottom:6px}
-.logo h1{font-size:1.8em;line-height:1.3;color:#f8d77c;letter-spacing:3px;text-transform:uppercase;white-space:nowrap}
+.logo h1{font-size:1.45em;line-height:1.3;color:#f8d77c;letter-spacing:2px;text-transform:uppercase}
 .tagline{color:#fff;font-size:1em;margin:8px 0 12px}
 .garis{border-bottom:1px solid #f8d77c50;margin-bottom:10px}
 .nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
@@ -19,9 +19,11 @@ body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
 .nav a.aktif{background:linear-gradient(180deg,#b78628,#8c651a);color:#fff;font-weight:bold;border:none}
 .nav a:not(.aktif){background:transparent;color:#f8d77c}
 .nav .baris-akhir{grid-column:span 3;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.isi{padding:15px 10px;text-align:center}
-.isi h2{color:#f8d77c;font-size:1.4em;margin-bottom:15px}
-.isi p{line-height:1.7;margin-bottom:12px}
+.isi{padding:20px 10px;text-align:center}
+.isi h2{color:#f8d77c;font-size:1.25em;margin-bottom:20px;text-transform:uppercase;letter-spacing:1px}
+.kutipan{margin-top:10px;padding:20px 15px;border-top:1px solid #f8d77c30;border-bottom:1px solid #f8d77c30}
+.kutipan .kata{line-height:1.8;font-size:1.05em}
+.kutipan .nama{color:#f8d77c;margin-top:18px;font-size:1.1em;letter-spacing:2px;text-transform:uppercase}
  </style>
 </head>
 <body>
@@ -42,16 +44,18 @@ body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
    <div class="baris-akhir">
     <a href="kelompok6.html">SEGAR</a>
     <a href="kelompok7.html">POPULER</a>
-    <a href="info.html">ALAMAT</a>
+    <a href="info.html">INFO</a>
    </div>
   </nav>
  </div>
 
  <div class="isi">
-  <h2>Selamat Datang di ATLANTIC PERFUME</h2>
-  <p>Kami menyediakan berbagai macam pilihan parfum berkualitas dengan wangi yang tahan lama dan elegan.</p>
-  <p>Silakan jelajahi koleksi kami sesuai kelompok aroma yang kamu sukai. Tersedia <strong>140 varian</strong> wangi yang bisa kamu pilih!</p>
-  <p style="margin-top:10px;color:#f8d77c">✨ Temukan Wangi yang Mencerminkan Dirimu ✨</p>
+  <h2>SELAMAT DATANG DI ATLANTIC PERFUME</h2>
+
+  <div class="kutipan">
+   <p class="kata">"Wewangian adalah bagian dari jiwa yang terbang melayang, menyapa dunia sebelum raga itu tiba."</p>
+   <p class="nama">KHALIL GIBRAN</p>
+  </div>
  </div>
 </div>
 </body>
