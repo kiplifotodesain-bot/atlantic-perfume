@@ -3,70 +3,120 @@
 <head>
  <meta charset="UTF-8">
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>ALAMAT | ATLANTIC PERFUME</title>
+ <title>INFO TOKO | ATLANTIC PERFUME</title>
  <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Georgia',serif}
 html,body{height:100%}
-body{background:linear-gradient(180deg,#0f1a2f,#152238);color:#fff}
+body{background:#0f2040;color:#fff;line-height:1.6;padding-top:100px}
 .container{max-width:720px;margin:0 auto;padding:0 16px}
-.kepala{text-align:center;padding:15px 10px 10px;position:sticky;top:0;z-index:10;background:linear-gradient(180deg,#0f1a2f,#152238ee)}
-.logo{text-align:center;margin-bottom:6px}
-.logo h1{font-size:1.45em;line-height:1.3;color:#f8d77c;letter-spacing:2px;text-transform:uppercase}
-.tagline{color:#fff;font-size:1em;margin:8px 0 12px}
-.garis{border-bottom:1px solid #f8d77c50;margin-bottom:10px}
-.nav{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:10px}
-.nav a{display:flex;align-items:center;justify-content:center;padding:8px 4px;border-radius:24px;text-decoration:none;font-size:0.88em;transition:all .25s;border:1px solid #f8d77c;height:44px;line-height:1.2;text-align:center;cursor:pointer}
-.nav a.aktif{background:linear-gradient(180deg,#b78628,#8c651a);color:#fff;font-weight:bold;border:none}
-.nav a:not(.aktif){background:transparent;color:#f8d77c}
-.nav .baris-akhir{grid-column:span 3;display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
-.judul-halaman{text-align:center;font-size:1.3em;color:#f8d77c;margin:10px 0 15px;padding-bottom:6px;border-bottom:1px solid #f8d77c40}
-.info-box{background:#ffffff0a;border-radius:12px;padding:20px;line-height:1.8;text-align:center;border:1px solid #f8d77c30}
-.info-box strong{color:#f8d77c}
-.wa-btn, .peta-btn{display:block;width:85%;max-width:320px;margin:12px auto;background:linear-gradient(180deg,#b78628,#8c651a);color:#fff;text-decoration:none;padding:12px 20px;border-radius:24px;font-weight:bold;border:none;transition:all .25s;font-size:1.05em}
-.wa-btn:hover, .peta-btn:hover{background:linear-gradient(180deg,#c9952f,#9e721f)}
-.kembali{margin-top:25px;text-align:center}
-.kembali a{display:inline-block;color:#f8d77c;text-decoration:none;border:1px solid #f8d77c;padding:9px 22px;border-radius:24px;cursor:pointer}
+
+/* === BAGIAN ATAS — MENEMPEL DIAM === */
+.kepala{position:fixed;top:0;left:0;right:0;z-index:9999;background:#0f2040;padding:12px 15px 12px}
+.kepala .isi-kepala{max-width:720px;margin:0 auto;position:relative}
+
+/* === TOMBOL MENU === */
+.tombol-menu{position:absolute;left:0;top:4px;font-size:1.5em;color:#f8d77c;cursor:pointer;padding:2px 8px;line-height:1;border:1px solid #f8d77c50;border-radius:6px}
+
+/* === LOGO === */
+.logo{text-align:center;padding-left:15px}
+.logo h1{font-size:1.1em;color:#f8d77c;letter-spacing:1px;text-transform:uppercase;font-weight:normal;white-space:nowrap}
+
+/* === TULISAN TAGLINE === */
+.tagline{text-align:center;font-size:0.9em;color:#e0e0e0;margin:10px 0 8px;padding-left:0}
+
+/* === GARIS PUTIH === */
+.garis-bawah{width:65%;height:1px;background:#ffffff;margin:0 auto}
+
+/* === ISI KONTEN === */
+.konten{padding:20px 0 40px;text-align:center}
+.konten h2{color:#f8d77c;margin-bottom:25px;font-size:1.4em}
+.konten .kotak{background:#ffffff0f;border-radius:10px;padding:25px 20px;margin-bottom:20px;border:1px solid #ffffff1a}
+.konten .kotak h3{color:#f8d77c;margin-bottom:15px;font-size:1.1em}
+.konten .kotak p{margin-bottom:10px;font-size:0.98em;line-height:1.7}
+.konten .kotak a{color:#74ebd5;text-decoration:none;border-bottom:1px solid #74ebd550}
+.konten .kotak a:hover{color:#f8d77c;border-bottom-color:#f8d77c}
+
+/* === MENU SAMPING === */
+.menu-latar{position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,0.7);z-index:99999;display:none}
+.menu-latar.buka{display:block}
+.menu-kotak{position:fixed;top:0;left:0;width:260px;height:100%;background:#152238;z-index:100000;padding:20px;border-right:1px solid #f8d77c40;transform:translateX(-100%);transition:transform 0.3s ease}
+.menu-kotak.buka{transform:translateX(0)}
+.menu-tutup{text-align:right;color:#f8d77c;font-size:1.5em;cursor:pointer;margin-bottom:20px}
+.menu-judul{color:#f8d77c;font-size:1.1em;margin-bottom:15px;padding-bottom:10px;border-bottom:1px solid #f8d77c30}
+.menu-item{display:block;color:#fff;text-decoration:none;padding:10px 12px;margin-bottom:5px;border-radius:6px;transition:all 0.2s}
+.menu-item:hover{background:#f8d77c15;color:#f8d77c}
+.menu-item.aktif{background:#f8d77c25;color:#f8d77c;font-weight:bold}
  </style>
 </head>
 <body>
-<div class="container">
- <div class="kepala">
+
+<div class="menu-latar" id="menuLatar" onclick="tutupMenu()"></div>
+<div class="menu-kotak" id="menuKotak">
+ <div class="menu-tutup" onclick="tutupMenu()">✕</div>
+ <div class="menu-judul">DAFTAR VARIAN</div>
+ <a href="index.html" class="menu-item">🏠 BERANDA</a>
+ <a href="kelompok1.html" class="menu-item">🍊 SEGAR — Sitrus</a>
+ <a href="kelompok2.html" class="menu-item">🌸 BUNGA — Elegan</a>
+ <a href="kelompok3.html" class="menu-item">🪵 KAYU — Mewah</a>
+ <a href="kelompok4.html" class="menu-item">🍬 MANIS — Legenda</a>
+ <a href="kelompok5.html" class="menu-item">🌶️ REMPAH — Kuat</a>
+ <a href="kelompok6.html" class="menu-item">🌊 SEGAR — Laut</a>
+ <a href="kelompok7.html" class="menu-item">🔥 TERLARIS</a>
+ <a href="info.html" class="menu-item aktif">ℹ️ INFO TOKO</a>
+</div>
+
+<!-- BAGIAN ATAS — SAMA PERSIS -->
+<div class="kepala">
+ <div class="isi-kepala">
+  <span class="tombol-menu" onclick="bukaMenu()">☰</span>
   <div class="logo">
    <h1>ATLANTIC PERFUME</h1>
   </div>
-  <div class="tagline">Temukan Wangi yang Mencerminkan Dirimu</div>
-  <div class="garis"></div>
-  <nav class="nav">
-   <a href="index.html">BERANDA</a>
-   <a href="kelompok1.html">SEGAR</a>
-   <a href="kelompok2.html">BUNGA</a>
-   <a href="kelompok3.html">KAYU</a>
-   <a href="kelompok4.html">MANIS</a>
-   <a href="kelompok5.html">REMPAH</a>
-   <div class="baris-akhir">
-    <a href="kelompok6.html">SEGAR</a>
-    <a href="kelompok7.html">POPULER</a>
-    <a href="info.html" class="aktif">ALAMAT</a>
-   </div>
-  </nav>
+  <p class="tagline">Temukan Wangi yang Mencerminkan Dirimu</p>
+  <div class="garis-bawah"></div>
  </div>
-
- <h2 class="judul-halaman">📍 LOKASI TOKO</h2>
- <div class="info-box">
-  <p><strong>ATLANTIC PERFUME</strong></p>
-  <p style="margin:10px 0">
-   Jl. Batur Sari (Area Kuliner)<br>
-   Denpasar Selatan, Denpasar City, Bali<br>
-   Kode Pos 80228
-  </p>
-  <p>⏰ Jam Operasional: 09.00 – 22.00 WITA</p>
-  <div style="margin-top:18px">
-   <a href="https://wa.me/6289676100177" target="_blank" class="wa-btn">💬 Hubungi WhatsApp</a>
-   <a href="https://maps.app.goo.gl/kvJayiASrCyBQCES6?g_st=awb" target="_blank" class="peta-btn">📍 Buka di Google Maps</a>
-  </div>
- </div>
-
- <div class="kembali"><a href="index.html">← Kembali ke Beranda</a></div>
 </div>
+
+<!-- ISI HALAMAN -->
+<div class="container">
+ <div class="konten">
+  <h2>ℹ️ INFORMASI TOKO</h2>
+
+  <div class="kotak">
+   <h3>📍 ALAMAT TOKO</h3>
+   <p>Jalan Batur Sari<br>
+   (Area Kuliner Batur Sari)<br>
+   Denpasar Selatan, Bali<br>
+   Kode Pos 80228</p>
+   <p><a href="https://maps.app.goo.gl/kvJayiASrCyBQCES6?g_st=awb" target="_blank">👉 Buka di Peta Google Maps</a></p>
+  </div>
+
+  <div class="kotak">
+   <h3>🕐 JAM BUKA</h3>
+   <p>Setiap Hari<br>
+   Jam 09.00 Pagi — 22.00 Malam</p>
+  </div>
+
+  <div class="kotak">
+   <h3>💬 HUBUNGI KAMI</h3>
+   <p>Silakan hubungi melalui WhatsApp untuk pemesanan, konsultasi, dan informasi lainnya.</p>
+  </div>
+
+ </div>
+</div>
+
+<script>
+function bukaMenu(){
+ document.getElementById('menuKotak').classList.add('buka')
+ document.getElementById('menuLatar').classList.add('buka')
+ document.body.style.overflow='hidden'
+}
+function tutupMenu(){
+ document.getElementById('menuKotak').classList.remove('buka')
+ document.getElementById('menuLatar').classList.remove('buka')
+ document.body.style.overflow=''
+}
+</script>
+
 </body>
 </html>
